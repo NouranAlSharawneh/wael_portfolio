@@ -1,7 +1,9 @@
 @import url("https://assets.soracom.io/fonts/aeonik/Aeonik.css");
 @import url("https://assets.soracom.io/fonts/source-han-sans/SourceHanSansJP-VF.css");
 @import "./components/header.css";
+@import "./components/divider.css";
 @import "./sections/hero.css";
+@import "./sections/about.css";
 
 :root {
   font-feature-settings: "ss02", "ss08";

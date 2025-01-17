@@ -1,0 +1,112 @@
+.about-section {
+  height: max-content;
+  padding: 0 3rem 3rem 3rem;
+  background-color: var(--bunker-blue);
+}
+
+.main-layout {
+  padding-top: 0.6rem;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  grid-template-rows: 0.4fr 1fr;
+  row-gap: 3rem;
+}
+
+.main-text {
+  width: 70%;
+}
+
+.main-text span {
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+.main-text p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+
+.main-title h2 {
+  margin-top: 2.5rem;
+  font-weight: 300;
+  font-size: 8rem;
+  text-align: right;
+  justify-content: end;
+}
+
+.main-side_content span {
+  color: var(--rock-blue);
+  font-size: 10rem;
+  line-height: 0.5;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.main-side_img {
+  display: flex;
+  gap: 2rem;
+  align-items: end;
+}
+
+.main-side_img img {
+  clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.main-side_img .main-img_desc {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+.main-img {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+
+.main-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  background-image: url("../../public/assets/buliding.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  clip-path: polygon(28% 13%, 32% 0, 100% 0, 100% 100%, 0 100%, 0 13%);
+}
+
+@media screen and (max-width: 50em) {
+  .main-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.25fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "main-text"
+      "main-title"
+      "main-side_content"
+      "main-img";
+  }
+  .main-text {
+    width: 100%;
+  }
+  .main-title h2 {
+    margin-top: 0rem;
+    font-size: 5rem;
+    justify-self: center;
+    text-align: left;
+  }
+
+  .main-side_content span {
+    font-size: 9rem;
+    line-height: 0;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .main-side_img {
+    flex-direction: column;
+    align-items: start;
+  }
+}

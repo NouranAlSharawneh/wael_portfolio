@@ -1,0 +1,10 @@
+.divider-wrapper {
+  background-color: var(--bunker-blue);
+  padding: 0 3rem;
+}
+
+.divider {
+  background-color: var(--mist-grey);
+  color: var(--bunker-blue);
+  height: 0.05rem;
+}
