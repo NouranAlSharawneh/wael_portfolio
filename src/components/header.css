@@ -70,6 +70,9 @@ button {
 }
 
 @media screen and (max-width: 40em) {
+  .nav_menu {
+    padding: 1.5rem 2rem;
+  }
   .nav_items nav ul {
     flex-direction: column;
     display: none;

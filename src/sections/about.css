@@ -79,6 +79,9 @@
 }
 
 @media screen and (max-width: 50em) {
+  .about-section {
+    padding: 0 2rem;
+  }
   .main-layout {
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 0.25fr 0.5fr 0.5fr;
