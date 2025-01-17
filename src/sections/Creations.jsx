@@ -1,9 +1,10 @@
+import image from "../../public/assets/image.webp";
 const Creations = () => {
   return (
     <section className="creations-section">
       <div className="creation-layout">
         <div className="creation-main-area_img">
-          <img src="../../public/assets/image.webp" alt="" />
+          <img src={image} alt="" />
           <div className="creation-main-area_caption">
             <p>Nunu shosho</p>
             <span>whats up bestie kinda killing it</span>
