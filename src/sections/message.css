@@ -1,0 +1,41 @@
+.message-section {
+  background-color: var(--bunker-blue);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../public/assets/gradient.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding: 5rem 3rem 3rem 3rem;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  background-blend-mode: difference;
+}
+
+.message-section h4 {
+  width: 75%;
+  text-align: right;
+  font-size: 6.5rem;
+  font-weight: 300;
+}
+.message-section .message-img {
+  line-height: 0;
+  display: inline-block;
+  background: url("../../public/assets/image.webp") no-repeat center center;
+  background-size: contain;
+  clip-path: polygon(80% 0, 100% 50%, 100% 100%, 0 100%, 0 0);
+  border-radius: 1rem;
+  width: 180px;
+  height: 100px;
+}
+
+@media screen and (max-width: 50em) {
+  .message-section {
+    background-position: center left;
+  }
+  .message-section h4 {
+    width: 100%;
+    text-align: left;
+    font-size: 2.5rem;
+  }
+}

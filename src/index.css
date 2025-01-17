@@ -4,6 +4,7 @@
 @import "./components/divider.css";
 @import "./sections/hero.css";
 @import "./sections/about.css";
+@import "./sections/message.css";
 
 :root {
   font-feature-settings: "ss02", "ss08";
