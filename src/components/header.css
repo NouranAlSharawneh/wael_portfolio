@@ -1,0 +1,59 @@
+.nav_menu {
+  background-color: var(--bunker-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+}
+
+.nav_logo p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.nav_logo span {
+  font-size: 1.5rem;
+  color: var(--rock-blue);
+  font-weight: 1000;
+  font-style: bold;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+nav ul li {
+  color: var(--mist-grey);
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  color: var(--rock-blue);
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  text-decoration-thickness: 0.1rem;
+  transition: text-decoration 0.9s cubic-bezier(0.42, 0, 0.58, 1) left;
+}
+
+.nav_links a {
+  font-weight: 100;
+  font-size: 0.9rem;
+  color: var(--mist-grey);
+}
+
+.nav_links a:hover {
+  color: var(--rock-blue);
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  text-decoration-thickness: 0.1rem;
+  transition: text-decoration 0.9s cubic-bezier(0.42, 0, 0.58, 1) left;
+}
+
+.nav_links a:first-child {
+  padding-right: 1rem;
+}

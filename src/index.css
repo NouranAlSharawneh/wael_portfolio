@@ -1,0 +1,73 @@
+@import url("https://assets.soracom.io/fonts/aeonik/Aeonik.css");
+@import url("https://assets.soracom.io/fonts/source-han-sans/SourceHanSansJP-VF.css");
+@import "./components/header.css";
+@import "./sections/hero.css";
+
+:root {
+  font-feature-settings: "ss02", "ss08";
+  font-family: Aeonik, "Source Han Sans JP", Arial, Helvetica, sans-serif;
+
+  --bunker-blue: #0a0e14;
+  --rock-blue: #96b4c8;
+  --concrete-white: #f5f5f5;
+  --mist-grey: #e4e4e4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--concrete-white);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
