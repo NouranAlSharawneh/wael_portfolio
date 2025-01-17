@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import heroImage from "../../public/assets/hero.webp";
 
 const Hero = () => {
   return (
@@ -9,7 +10,7 @@ const Hero = () => {
           Urban <span>Space </span>
         </h1>
         <div className="img">
-          <img src="../../public/assets/hero.webp" alt="" />
+          <img src={heroImage} alt="" />
           <div className="hero-text">
             <p>
               <span>-Since 2010</span>

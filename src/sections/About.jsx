@@ -1,3 +1,5 @@
+import houseImage from "../../public/assets/house.jpg";
+
 const About = () => {
   return (
     <section className="about-section">
@@ -17,7 +19,7 @@ const About = () => {
         <div className="main-side_content">
           <span>&#x2197;</span>
           <div className="main-side_img">
-            <img src="../../public/assets/house.jpg" alt="" />
+            <img src={houseImage} alt="" />
             <div className="main-img_desc">
               <p>Year Completed: 2021</p>
               <p>Location: Khobar, Saudi Arbia</p>
