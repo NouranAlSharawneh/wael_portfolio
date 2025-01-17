@@ -1,5 +1,6 @@
 import Divider from "./components/Divider";
 import About from "./sections/About";
+import Creations from "./sections/Creations";
 import Hero from "./sections/Hero";
 import Message from "./sections/Message";
 
@@ -11,6 +12,7 @@ const App = () => {
       <About />
       <Message />
       <Divider />
+      <Creations />
     </>
   );
 };
