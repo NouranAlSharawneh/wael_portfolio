@@ -1,4 +1,7 @@
 .nav_menu {
+  position: fixed;
+  z-index: 30;
+  width: 100%;
   background-color: var(--bunker-blue);
   display: flex;
   justify-content: space-between;
@@ -13,13 +16,13 @@
 }
 
 .nav_logo span {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--rock-blue);
   font-weight: 1000;
   font-style: bold;
 }
 
-nav ul {
+.nav_items nav ul {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -27,12 +30,12 @@ nav ul {
   font-size: 0.9rem;
 }
 
-nav ul li {
+.nav_items nav ul li {
   color: var(--mist-grey);
   cursor: pointer;
 }
 
-nav ul li:hover {
+.nav_items nav ul li:hover {
   color: var(--rock-blue);
   text-decoration: underline;
   text-underline-offset: 0.2rem;
@@ -56,4 +59,52 @@ nav ul li:hover {
 
 .nav_links a:first-child {
   padding-right: 1rem;
+}
+
+button {
+  display: none;
+}
+
+.mobile_menu nav ul {
+  display: none;
+}
+
+@media screen and (max-width: 40em) {
+  .nav_items nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav_links {
+    display: none;
+  }
+
+  button {
+    display: inline;
+    background: var(--bunker-blue);
+    border: 0;
+    cursor: pointer;
+  }
+
+  .mobile_menu {
+    position: absolute;
+    top: 13%;
+    background-color: var(--bunker-blue);
+    z-index: 35;
+    width: 100%;
+    color: var(--concrete-white);
+    transition: all 8s ease-in;
+  }
+
+  .mobile_menu nav ul {
+    cursor: pointer;
+    display: flex;
+    visibility: visible;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    color: var(--concrete-white);
+  }
 }
