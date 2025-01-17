@@ -37,11 +37,18 @@
 }
 
 .main-side_content span {
+  display: flex;
   color: var(--rock-blue);
   font-size: 10rem;
   line-height: 0.5;
   font-weight: 900;
   margin-bottom: 1rem;
+  cursor: pointer;
+  transition: transform 0.7s ease;
+}
+
+.main-side_content span:hover {
+  transform: rotate(3deg) translateY(-10px);
 }
 
 .main-side_img {

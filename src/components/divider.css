@@ -1,10 +1,16 @@
 .divider-wrapper {
   background-color: var(--bunker-blue);
   padding: 1rem 3rem 0 3rem;
+  overflow: hidden; /* To prevent the divider from overflowing during the animation */
 }
 
 .divider {
   background-color: var(--mist-grey);
-  color: var(--bunker-blue);
   height: 0.05rem;
+  width: 0; /* Start with zero width */
+  transition: width 0.8s ease-in-out; /* Smooth transition */
+}
+
+.divider-wrapper.animate .divider {
+  width: 100%; /* Animate to full width */
 }

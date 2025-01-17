@@ -33,6 +33,7 @@
 .nav_items nav ul li {
   color: var(--mist-grey);
   cursor: pointer;
+  transition: text-decoration 0.9s cubic-bezier(0.42, 0, 0.58, 1) left;
 }
 
 .nav_items nav ul li:hover {
@@ -40,13 +41,13 @@
   text-decoration: underline;
   text-underline-offset: 0.2rem;
   text-decoration-thickness: 0.1rem;
-  transition: text-decoration 0.9s cubic-bezier(0.42, 0, 0.58, 1) left;
 }
 
 .nav_links a {
   font-weight: 100;
   font-size: 0.9rem;
   color: var(--mist-grey);
+  transition: text-decoration 0.9s ease-in-out;
 }
 
 .nav_links a:hover {
@@ -54,7 +55,6 @@
   text-decoration: underline;
   text-underline-offset: 0.2rem;
   text-decoration-thickness: 0.1rem;
-  transition: text-decoration 0.9s cubic-bezier(0.42, 0, 0.58, 1) left;
 }
 
 .nav_links a:first-child {

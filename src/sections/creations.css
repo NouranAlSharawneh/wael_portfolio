@@ -23,12 +23,29 @@
   width: 1150px;
   height: 450px;
   object-fit: cover;
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.creation-main-area_img:hover img {
+  cursor: pointer;
+  transform: scale(1.01);
 }
 
 .creation-main-area_caption {
   padding-top: 1.5rem;
   display: flex;
   justify-content: space-between;
+}
+
+.creation-main-area_img hr {
+  background-color: var(--rock-blue);
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.creation-main-area_img:hover hr {
+  width: 0%;
 }
 
 .creation-side-area_title {
@@ -62,6 +79,11 @@
   font-size: 10rem;
   line-height: 0.5;
   font-weight: 900;
+  transition: transform 0.7s ease;
+}
+
+.creation-side-area span:hover {
+  transform: rotate(5deg);
 }
 
 .creation-side-area p {
