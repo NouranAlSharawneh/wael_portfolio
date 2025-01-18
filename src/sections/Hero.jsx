@@ -42,6 +42,12 @@ const Hero = () => {
           }
           return 0; // No vertical change for desktop
         },
+
+        paddingTop: () => {
+          if (window.innerWidth < 768) {
+            return "0.1rem";
+          }
+        },
         paddingLeft: "1.3rem",
         ease: "power1.out",
         backgroundColor: "var(--bunker-blue)",
