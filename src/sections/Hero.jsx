@@ -26,26 +26,26 @@ const Hero = () => {
       tl.to(titleRef.current, {
         fontSize: () => {
           if (window.innerWidth < 768) {
-            return "1.5rem"; // Smaller font for mobile
+            return "1.5rem";
           }
-          return "3rem"; // Larger font for desktop
+          return "3rem";
         },
         x: () => {
           if (window.innerWidth < 768) {
-            return -15; // Adjust vertical position for mobile
+            return -15;
           }
-          return -25; // No vertical change for desktop
+          return -25;
         },
         y: () => {
           if (window.innerWidth < 768) {
-            return -5; // Adjust vertical position for mobile
+            return -5;
           }
           return 0; // No vertical change for desktop
         },
 
         paddingTop: () => {
           if (window.innerWidth < 768) {
-            return "0.1rem";
+            return "0rem";
           }
         },
         paddingLeft: "1.3rem",
