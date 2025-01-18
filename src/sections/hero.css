@@ -1,8 +1,8 @@
 .hero-section {
   height: 100dvh;
   background-color: var(--bunker-blue);
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  transition: padding-left 0.9s ease-out, padding-right 0.9s ease-out; /* Smooth padding transition */
+  overflow-x: hidden;
+  transition: padding-left 0.9s ease-out, padding-right 0.9s ease-out;
 }
 
 .content {
@@ -58,12 +58,13 @@
 
 @media screen and (max-width: 768px) {
   .content {
-    padding-top: 5rem;
     padding-left: 2rem;
     padding-right: 2rem;
   }
   .content h1 {
     width: 100%;
+    padding-top: 4rem;
+    padding-left: 1rem;
     font-size: 3rem;
     padding-right: 1rem;
     clip-path: polygon(0 0, 90% 0, 70% 100%, 0% 100%);

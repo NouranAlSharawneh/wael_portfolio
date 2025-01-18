@@ -33,6 +33,10 @@ html {
   color: var(--concrete-white);
 }
 
+body {
+  overflow-x: hidden;
+}
+
 img,
 picture,
 video,

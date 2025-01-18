@@ -21,32 +21,17 @@ const Hero = () => {
         },
       });
 
-      tl.to(titleRef.current, {
-        fontSize: () => {
-          if (window.innerWidth < 768) {
-            return "1.5rem";
-          }
-          return "3rem";
-        },
-        x: () => {
-          if (window.innerWidth < 768) {
-            return -15;
-          }
-          return -25;
-        },
-        y: () => {
-          if (window.innerWidth < 768) {
-            return -5;
-          }
-          return 0;
-        },
+      const isMobile = window.innerWidth < 768;
 
-        paddingTop: () => {
-          if (window.innerWidth < 768) {
-            return "0rem";
-          }
-        },
+      tl.to(titleRef.current, {
+        fontSize: isMobile ? "1.5rem" : "3rem",
+        x: isMobile ? -15 : -25,
+        y: isMobile ? -5 : 0,
+        paddingTop: isMobile ? "2rem" : undefined,
         paddingLeft: "1.3rem",
+        startAt: {
+          x: isMobile ? -15 : "",
+        },
         ease: "power1.out",
         backgroundColor: "var(--bunker-blue)",
       });
@@ -56,15 +41,15 @@ const Hero = () => {
           if (window.innerWidth < 768) {
             return 1.1;
           }
-          return 1.01;
+          return 1.05;
         },
         scaleY: 1,
         ease: "power1.out",
       });
 
       tl.to(heroSectionRef.current, {
-        paddingLeft: "0.8rem",
-        paddingRight: "0.8rem",
+        paddingLeft: "0.3rem",
+        paddingRight: "0.3rem",
         ease: "power1.out",
       });
 
