@@ -33,7 +33,7 @@ const Hero = () => {
         x: -25,
         y: () => {
           if (window.innerWidth < 768) {
-            return -15;
+            return -45;
           }
           return 0;
         },
