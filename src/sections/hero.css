@@ -58,12 +58,13 @@
 
 @media screen and (max-width: 768px) {
   .content {
+    position: fixed;
     padding-left: 2rem;
     padding-right: 2rem;
   }
   .content h1 {
     width: 100%;
-    padding-top: 4rem;
+    padding-top: 3.5rem;
     padding-left: 1rem;
     font-size: 3rem;
     padding-right: 1rem;
