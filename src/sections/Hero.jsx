@@ -29,7 +29,7 @@ const Hero = () => {
         x: isMobile ? -15 : -25,
         y: isMobile ? -5 : 0,
         paddingTop: isMobile ? "2rem" : undefined,
-        paddingLeft: "1.3rem",
+        paddingLeft: isMobile ? "" : "1.3rem",
         startAt: {
           x: isMobile ? -15 : "",
         },
@@ -38,12 +38,7 @@ const Hero = () => {
       });
 
       tl.to(imageRef.current, {
-        scaleX: () => {
-          if (window.innerWidth < 768) {
-            return 1.1;
-          }
-          return 1.05;
-        },
+        scaleX: isMobile ? 1.1 : 1.01,
         scaleY: 1,
         ease: "power1.out",
       });

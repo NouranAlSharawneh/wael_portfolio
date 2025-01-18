@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 3rem 0 3rem;
 }
 
 .nav_logo p {
@@ -71,7 +71,7 @@ button {
 
 @media screen and (max-width: 40em) {
   .nav_menu {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2rem 0 2rem;
   }
   .nav_items nav ul {
     flex-direction: column;
@@ -109,7 +109,7 @@ button {
     align-items: center;
     flex-direction: row;
     gap: 1rem;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
     color: var(--concrete-white);
   }
 }
