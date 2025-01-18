@@ -30,10 +30,15 @@ const Hero = () => {
           }
           return "3rem"; // Larger font for desktop
         },
-        x: -25,
+        x: () => {
+          if (window.innerWidth < 768) {
+            return -15; // Adjust vertical position for mobile
+          }
+          return -25; // No vertical change for desktop
+        },
         y: () => {
           if (window.innerWidth < 768) {
-            return -45; // Adjust vertical position for mobile
+            return -5; // Adjust vertical position for mobile
           }
           return 0; // No vertical change for desktop
         },
