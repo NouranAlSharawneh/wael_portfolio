@@ -22,37 +22,42 @@ const Hero = () => {
         },
       });
 
-      // Title animation
+      // Title animation (font size and position change only on smaller screens)
       tl.to(titleRef.current, {
         fontSize: () => {
           if (window.innerWidth < 768) {
-            return "1.5rem";
+            return "1.5rem"; // Smaller font for mobile
           }
-          return "3rem";
+          return "3rem"; // Larger font for desktop
         },
         x: -25,
         y: () => {
           if (window.innerWidth < 768) {
-            return -45;
+            return -45; // Adjust vertical position for mobile
           }
-          return 0;
+          return 0; // No vertical change for desktop
         },
         paddingLeft: "1.3rem",
         ease: "power1.out",
         backgroundColor: "var(--bunker-blue)",
       });
 
-      // Image scaling animation
+      // Image scaling animation (only scale horizontally on mobile)
       tl.to(imageRef.current, {
-        scaleX: 1.03,
-        scaleY: 1,
+        scaleX: () => {
+          if (window.innerWidth < 768) {
+            return 1.1; // Slightly scale the image on mobile
+          }
+          return 1.01; // No scaling on desktop
+        },
+        scaleY: 1, // Keep the vertical scale the same
         ease: "power1.out",
       });
 
-      // Adjust padding of the hero section as you scroll
+      // Adjust padding of the hero section
       tl.to(heroSectionRef.current, {
-        paddingLeft: "1rem",
-        paddingRight: "1rem",
+        paddingLeft: "0.8rem",
+        paddingRight: "0.8rem",
         ease: "power1.out",
       });
 
@@ -62,8 +67,7 @@ const Hero = () => {
           tl.kill();
         }
       };
-    }, []),
-      [heroSectionRef, titleRef, imageRef];
+    }, []); // Dependencies should remain empty to run only once
   };
 
   useGsap();
