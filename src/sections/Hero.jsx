@@ -17,19 +17,14 @@ const Hero = () => {
           end: "bottom top",
           scrub: 2,
           pin: true,
-          pinSpacing: false, // Ensures it doesn't change the space as it pins
-          markers: true, // Add markers for debugging (can remove in production)
+          pinSpacing: false,
+          // markers: true,
         },
       });
 
       // Title animation
       tl.to(titleRef.current, {
-        fontSize: () => {
-          if (window.innerWidth < 768) {
-            return "2rem";
-          }
-          return "3rem";
-        },
+        fontSize: () => (window.innerWidth < 768 ? "1.5rem" : "3rem"),
         x: -25,
         paddingLeft: "1.2rem",
         ease: "power1.out",
