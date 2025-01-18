@@ -8,7 +8,6 @@ import Message from "./sections/Message";
 const App = () => {
   return (
     <>
-      <Header />
       <Hero />
       <Divider />
       <About />

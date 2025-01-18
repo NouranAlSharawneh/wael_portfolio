@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import heroImage from "../../public/assets/hero.webp";
+import Header from "../components/Header";
 
 const Hero = () => {
   const titleRef = useRef(null);
@@ -64,22 +65,25 @@ const Hero = () => {
   useGsap();
 
   return (
-    <section ref={heroSectionRef} className="hero-section">
-      <div className="content">
-        <h1 ref={titleRef}>
-          Urban <span>Space </span>
-        </h1>
-        <div className="img">
-          <img ref={imageRef} src={heroImage} alt="Hero" />
-          <div className="hero-text">
-            <p>
-              <span>-Since 2010</span>
-              Architecture, Bold Designs, Planning
-            </p>
+    <>
+      <section ref={heroSectionRef} className="hero-section">
+        <Header />
+        <div className="content">
+          <h1 ref={titleRef}>
+            Urban <span>Space </span>
+          </h1>
+          <div className="img">
+            <img ref={imageRef} src={heroImage} alt="Hero" />
+            <div className="hero-text">
+              <p>
+                <span>-Since 2010</span>
+                Architecture, Bold Designs, Planning
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
