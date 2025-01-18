@@ -64,7 +64,8 @@
   }
   .content h1 {
     width: 100%;
-    padding-top: 3.5rem;
+    z-index: 5;
+    padding-top: 3rem;
     padding-left: 1rem;
     font-size: 3rem;
     padding-right: 1rem;

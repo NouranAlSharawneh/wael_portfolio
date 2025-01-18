@@ -66,8 +66,8 @@ const Hero = () => {
 
   return (
     <>
+      <Header />
       <section ref={heroSectionRef} className="hero-section">
-        <Header />
         <div className="content">
           <h1 ref={titleRef}>
             Urban <span>Space </span>
