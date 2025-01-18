@@ -18,15 +18,26 @@ const Hero = () => {
           scrub: 2,
           pin: true,
           pinSpacing: false,
-          // markers: true,
+          // markers: true, // Uncomment for debugging if needed
         },
       });
 
       // Title animation
       tl.to(titleRef.current, {
-        fontSize: () => (window.innerWidth < 768 ? "1.5rem" : "3rem"),
+        fontSize: () => {
+          if (window.innerWidth < 768) {
+            return "2rem";
+          }
+          return "3rem";
+        },
         x: -25,
-        paddingLeft: "1.2rem",
+        y: () => {
+          if (window.innerWidth < 768) {
+            return -15;
+          }
+          return 0;
+        },
+        paddingLeft: "1.3rem",
         ease: "power1.out",
         backgroundColor: "var(--bunker-blue)",
       });
@@ -51,7 +62,8 @@ const Hero = () => {
           tl.kill();
         }
       };
-    }, []);
+    }, []),
+      [heroSectionRef, titleRef, imageRef];
   };
 
   useGsap();

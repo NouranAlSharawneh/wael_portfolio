@@ -110,19 +110,23 @@
   }
 
   .creation-main-area_img img {
-    width: 350px;
+    width: 100%;
     height: 450px;
     object-fit: cover;
   }
 
   .creation-side-area_title {
     padding: 1rem 0;
-    width: 100%;
+    width: 90%;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 5%;
   }
 
   .creation-side-area_title h5 {
+    padding: 0 2rem;
     font-size: 3.5rem;
     text-align: center;
   }
