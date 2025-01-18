@@ -91,7 +91,8 @@ button {
 
   .mobile_menu {
     position: fixed;
-    top: 10%;
+    top: 9%;
+    padding-top: 1rem;
     background-color: var(--bunker-blue);
     z-index: 75;
     height: 6rem;
