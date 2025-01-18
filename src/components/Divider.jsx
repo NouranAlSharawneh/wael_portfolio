@@ -1,37 +1,39 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Divider = () => {
   const dividerRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
+    // Create the GSAP animation with ScrollTrigger
+    const animation = gsap.fromTo(
+      dividerRef.current,
+      { width: "0%" }, // Starting width
+      {
+        width: "100%", // Ending width
+        duration: 1, // Duration of the animation
+        ease: "power2.out", // Easing function
+        scrollTrigger: {
+          trigger: dividerRef.current, // Element that triggers the animation
+          start: "top bottom", // Start the animation when the top of the element is at the bottom of the viewport
+          end: "top center", // End point (optional, for finer control)
+          toggleActions: "play reset play reset", // Controls the animation playback on scroll events
+        },
+      }
     );
 
-    if (dividerRef.current) {
-      observer.observe(dividerRef.current);
-    }
-
     return () => {
-      if (dividerRef.current) {
-        observer.unobserve(dividerRef.current);
-      }
+      // Clean up the animation and scroll trigger
+      animation.scrollTrigger.kill();
     };
   }, []);
 
   return (
-    <div
-      className={`divider-wrapper ${isVisible ? "animate" : ""}`}
-      ref={dividerRef}
-    >
-      <div className="divider"></div>
+    <div className="divider-wrapper">
+      <div className="divider" ref={dividerRef}></div>
     </div>
   );
 };

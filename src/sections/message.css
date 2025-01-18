@@ -17,7 +17,13 @@
   text-align: right;
   font-size: 6.5rem;
   font-weight: 300;
+  overflow: hidden; /* Ensures words stay within bounds during animation */
 }
+
+.message-section h4 .word {
+  display: inline-block; /* Ensures each word animates independently */
+}
+
 .message-section .message-img {
   line-height: 0;
   display: inline-block;
@@ -32,7 +38,7 @@
 @media screen and (max-width: 50em) {
   .message-section {
     background-position: center left;
-    padding-top: 1.5rem;
+    padding-top: 9rem;
   }
   .message-section h4 {
     width: 100%;

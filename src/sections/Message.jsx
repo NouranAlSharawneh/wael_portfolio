@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type"; // Utility for splitting text into words/letters
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,14 +13,19 @@ const Message = () => {
     const textElement = textRef.current;
     const imgElement = imgRef.current;
 
-    // Animate the text
+    // Split the text into words
+    const splitText = new SplitType(textElement, { types: "words" });
+
+    // Animate each word
     gsap.fromTo(
-      textElement,
+      splitText.words,
       { opacity: 0, y: 50 },
       {
         opacity: 1,
         y: 0,
-        duration: 1.5,
+        duration: 0.8,
+        stagger: 0.1, // Delay between each word's animation
+        ease: "power2.out",
         scrollTrigger: {
           trigger: textElement,
           start: "top 80%",
@@ -45,6 +51,11 @@ const Message = () => {
         },
       }
     );
+
+    // Cleanup SplitType on unmount
+    return () => {
+      splitText.revert();
+    };
   }, []);
 
   return (

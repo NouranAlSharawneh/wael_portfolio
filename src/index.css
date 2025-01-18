@@ -17,6 +17,10 @@
   --mist-grey: #e4e4e4;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
