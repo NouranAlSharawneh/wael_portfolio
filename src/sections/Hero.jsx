@@ -26,7 +26,7 @@ const Hero = () => {
       tl.to(titleRef.current, {
         fontSize: () => {
           if (window.innerWidth < 768) {
-            return "2rem";
+            return "1.5rem";
           }
           return "3rem";
         },
