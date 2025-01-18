@@ -9,7 +9,6 @@ const Hero = () => {
 
   const useGsap = () => {
     useEffect(() => {
-      // Initialize ScrollTrigger timeline without extra complexity
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: heroSectionRef.current,
@@ -18,11 +17,10 @@ const Hero = () => {
           scrub: 2,
           pin: true,
           pinSpacing: false,
-          // markers: true, // Uncomment for debugging if needed
+          // markers: true,
         },
       });
 
-      // Title animation (font size and position change only on smaller screens)
       tl.to(titleRef.current, {
         fontSize: () => {
           if (window.innerWidth < 768) {
@@ -40,7 +38,7 @@ const Hero = () => {
           if (window.innerWidth < 768) {
             return -5;
           }
-          return 0; // No vertical change for desktop
+          return 0;
         },
 
         paddingTop: () => {
@@ -53,32 +51,29 @@ const Hero = () => {
         backgroundColor: "var(--bunker-blue)",
       });
 
-      // Image scaling animation (only scale horizontally on mobile)
       tl.to(imageRef.current, {
         scaleX: () => {
           if (window.innerWidth < 768) {
-            return 1.1; // Slightly scale the image on mobile
+            return 1.1;
           }
-          return 1.01; // No scaling on desktop
+          return 1.01;
         },
-        scaleY: 1, // Keep the vertical scale the same
+        scaleY: 1,
         ease: "power1.out",
       });
 
-      // Adjust padding of the hero section
       tl.to(heroSectionRef.current, {
         paddingLeft: "0.8rem",
         paddingRight: "0.8rem",
         ease: "power1.out",
       });
 
-      // Cleanup the timeline when the component unmounts
       return () => {
         if (tl) {
           tl.kill();
         }
       };
-    }, []); // Dependencies should remain empty to run only once
+    }, []);
   };
 
   useGsap();
