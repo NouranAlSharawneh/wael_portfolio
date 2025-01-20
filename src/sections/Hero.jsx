@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
-import heroImage from "../../public/assets/hero.webp";
+import heroVideo from "../../public/assets/vidoes/hero-t.mov";
 import Header from "../components/Header";
 
 const Hero = () => {
@@ -59,20 +59,33 @@ const Hero = () => {
 
   useGsap();
 
+  const year = new Date().getFullYear();
+
   return (
     <>
       <Header />
       <section ref={heroSectionRef} className="hero-section">
         <div className="content">
           <h1 ref={titleRef}>
-            Urban <span>Space </span>
+            Port<span>folio </span>
           </h1>
           <div className="img">
-            <img ref={imageRef} src={heroImage} alt="Hero" />
+            {/* <img ref={imageRef} src={heroImage} alt="Hero" /> */}
+            <video
+              src={heroVideo}
+              autoPlay
+              ref={imageRef}
+              type="video/quicktime"
+              muted
+              loop
+              playsInline
+            ></video>
             <div className="hero-text">
               <p>
-                <span>-Since 2010</span>
-                Architecture, Bold Designs, Planning
+                Wael Al-Sharawneh -{year}
+                <span>
+                  This website showcases all my work, created exclusively by me.
+                </span>
               </p>
             </div>
           </div>

@@ -10,21 +10,24 @@ const Header = () => {
     <header>
       <div className="nav_menu">
         <div className="nav_logo">
-          <p>
-            Studio<span>&apos;77</span>
-          </p>
+          <p>Wael Al-Sharawneh</p>
         </div>
         <div className="nav_items">
           <nav>
             <ul>
               <li>About</li>
-              <li>Services</li>
               <li>Projects</li>
+              <li>Experience</li>
             </ul>
           </nav>
         </div>
         <div className="nav_links">
-          <a href="#">Resume</a>
+          <a
+            href="../../public/assets/pdf/Wael_Al-sharawneh_CV_Architect.pdf"
+            download="Wael_Al-sharawneh_CV_Architect.pdf"
+          >
+            Resume
+          </a>
           <a href="#">Contact</a>
         </div>
         <button onClick={handleMenu}>{menu ? "Close" : "Menu"}</button>
@@ -34,8 +37,8 @@ const Header = () => {
           <nav>
             <ul>
               <li>About</li>
-              <li>Services</li>
               <li>Projects</li>
+              <li>Experience</li>
             </ul>
           </nav>
         </div>
