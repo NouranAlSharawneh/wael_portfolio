@@ -6,6 +6,7 @@
 @import "./sections/about.css";
 @import "./sections/message.css";
 @import "./sections/creations.css";
+@import "./sections/types.css";
 
 :root {
   font-feature-settings: "ss02", "ss08";

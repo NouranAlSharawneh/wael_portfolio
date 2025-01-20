@@ -4,6 +4,7 @@ import About from "./sections/About";
 import Creations from "./sections/Creations";
 import Hero from "./sections/Hero";
 import Message from "./sections/Message";
+import Types from "./sections/Types";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Message />
       <Divider />
       <Creations />
+      <Types />
     </>
   );
 };
