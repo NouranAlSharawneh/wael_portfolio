@@ -1,5 +1,5 @@
 .types-section {
-  height: 100vh;
+  height: 100dvh;
   padding: 0 3rem;
   background-color: var(--bunker-blue);
 }

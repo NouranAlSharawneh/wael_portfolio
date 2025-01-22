@@ -78,7 +78,6 @@ const Hero = () => {
               muted
               loop
               playsInline
-              // loading="lazy"
             />
             <div className="hero-text">
               <p>
