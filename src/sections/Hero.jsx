@@ -72,14 +72,13 @@ const Hero = () => {
           <div className="img">
             <video
               src={heroVideo}
-              preload="auto"
               autoPlay
               ref={videoRef}
               type="video/quicktime"
               muted
               loop
               playsInline
-              loading="lazy"
+              // loading="lazy"
             />
             <div className="hero-text">
               <p>
