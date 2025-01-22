@@ -22,3 +22,20 @@
 .countdown-content p {
   margin-top: auto;
 }
+
+@media screen and (max-width: 50em) {
+  .countdown-section {
+    background-color: var(--bunker-blue);
+    height: 100dvh;
+  }
+  .countdown-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: max-content;
+    gap: 2rem;
+  }
+
+  .countdown-content h3 {
+    font-size: 4.5rem;
+  }
+}
