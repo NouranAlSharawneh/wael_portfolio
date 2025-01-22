@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
-import heroVideo from "../../public/assets/vidoes/hero-t.mov";
+import heroVideo from "../../public/assets/vidoes/hero-t.mp4";
 import Header from "../components/Header";
 
 const Hero = () => {

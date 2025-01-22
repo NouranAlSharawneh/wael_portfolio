@@ -7,6 +7,7 @@
 @import "./sections/message.css";
 @import "./sections/creations.css";
 @import "./sections/types.css";
+@import "./sections/projectCountDown.css";
 
 :root {
   font-feature-settings: "ss02", "ss08";

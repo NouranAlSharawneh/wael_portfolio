@@ -1,9 +1,9 @@
 const ProjectCountDown = () => {
   return (
-    <section>
-      <div>
+    <section className="countdown-section">
+      <div className="countdown-grid">
         <div>
-          <div className="title">
+          <div className="countdown-content">
             <h3>Projects +55</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla,
