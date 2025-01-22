@@ -5,7 +5,7 @@ import Header from "../components/Header";
 
 const Hero = () => {
   const titleRef = useRef(null);
-  const imageRef = useRef(null);
+  const videoRef = useRef(null);
   const heroSectionRef = useRef(null);
 
   const useGsap = () => {
@@ -37,7 +37,7 @@ const Hero = () => {
         backgroundColor: "var(--bunker-blue)",
       });
 
-      tl.to(imageRef.current, {
+      tl.to(videoRef.current, {
         scaleX: isMobile ? 1.1 : 1.01,
         scaleY: 1,
         ease: "power1.out",
@@ -70,16 +70,17 @@ const Hero = () => {
             Port<span>folio </span>
           </h1>
           <div className="img">
-            {/* <img ref={imageRef} src={heroImage} alt="Hero" /> */}
             <video
               src={heroVideo}
+              preload="metadata"
               autoPlay
-              ref={imageRef}
+              ref={videoRef}
               type="video/quicktime"
               muted
               loop
               playsInline
-            ></video>
+              loading="lazy"
+            />
             <div className="hero-text">
               <p>
                 Wael Al-Sharawneh -{year}
