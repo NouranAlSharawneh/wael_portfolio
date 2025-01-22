@@ -28,7 +28,7 @@ const Hero = () => {
         fontSize: isMobile ? "1.5rem" : "3rem",
         x: isMobile ? -15 : -25,
         y: isMobile ? -5 : 0,
-        paddingTop: isMobile ? "3.5rem" : undefined,
+        paddingTop: isMobile ? "3rem" : undefined,
         paddingLeft: isMobile ? "" : "1.3rem",
         startAt: {
           x: isMobile ? -15 : "",
