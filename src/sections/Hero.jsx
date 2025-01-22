@@ -72,7 +72,7 @@ const Hero = () => {
           <div className="img">
             <video
               src={heroVideo}
-              preload="metadata"
+              preload="auto"
               autoPlay
               ref={videoRef}
               type="video/quicktime"
