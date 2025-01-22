@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import side from "../../public/assets/side.jpg";
 
 const ProjectCountDown = () => {
   const [projectNum, setProjectNum] = useState(0); // Initial count is 0
@@ -62,10 +63,7 @@ const ProjectCountDown = () => {
           </p>
         </div>
         <div>
-          <img
-            src="../../public/assets/side.jpg"
-            alt="Countdown illustration"
-          />
+          <img src={side} alt="Countdown illustration" />
         </div>
       </div>
     </section>
