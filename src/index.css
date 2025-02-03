@@ -8,6 +8,7 @@
 @import "./sections/creations.css";
 @import "./sections/types.css";
 @import "./sections/projectCountDown.css";
+@import "./components/videos.css";
 
 :root {
   font-feature-settings: "ss02", "ss08";
@@ -84,82 +85,4 @@ a {
 
 li {
   list-style-type: none;
-}
-
-.tabs button {
-  display: block;
-}
-
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-/* For desktop screens (3 columns) */
-@media (min-width: 1024px) {
-  .video-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Optional: Tablet screens (2 columns) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .video-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.video-item {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-}
-
-.video-player {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-item p {
-  color: var(--bunker-blue);
-}
-
-.pagination-container {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  padding: 20px;
-  background-color: yellow;
-}
-
-.pagination-container button {
-  padding: 8px 12px;
-  border: none;
-  display: block;
-  border-radius: 4px;
-  background: #ddd;
-  color: #333;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.pagination-container button:hover:not(:disabled) {
-  background: #007bff;
-  color: white;
-}
-
-.pagination-container button.active {
-  background: #007bff;
-  color: white;
-}
-
-.pagination-container button:disabled {
-  background: #eee;
-  color: #999;
-  cursor: not-allowed;
 }

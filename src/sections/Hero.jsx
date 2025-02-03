@@ -1,63 +1,62 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import heroVideo from "../../public/assets/vidoes/hero-t.mp4";
-import Header from "../components/Header";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const titleRef = useRef(null);
   const videoRef = useRef(null);
   const heroSectionRef = useRef(null);
 
-  const useGsap = () => {
-    useEffect(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: heroSectionRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 2,
-          pin: true,
-          pinSpacing: false,
-          // markers: true,
-        },
-      });
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
 
-      const isMobile = window.innerWidth < 768;
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: heroSectionRef.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: 2,
+        pin: true,
+        pinSpacing: false,
+      },
+    });
 
-      tl.to(titleRef.current, {
-        fontSize: isMobile ? "1.5rem" : "3rem",
-        x: isMobile ? -15 : -25,
-        y: isMobile ? -5 : 0,
-        paddingTop: isMobile ? "3rem" : undefined,
-        paddingLeft: isMobile ? "" : "1.3rem",
-        startAt: {
-          x: isMobile ? -15 : "",
-        },
-        ease: "power1.out",
-        backgroundColor: "var(--bunker-blue)",
-      });
+    tl.to(titleRef.current, {
+      fontSize: isMobile ? "1.5rem" : "3rem",
+      x: isMobile ? -15 : -25,
+      y: isMobile ? -5 : 0,
+      paddingTop: isMobile ? "3rem" : undefined,
+      paddingLeft: isMobile ? "" : "1.3rem",
+      ease: "power1.out",
+      backgroundColor: "var(--bunker-blue)",
+    });
 
-      tl.to(videoRef.current, {
-        scaleX: isMobile ? 1.1 : 1.01,
-        scaleY: 1,
-        ease: "power1.out",
-      });
+    tl.to(videoRef.current, {
+      scaleX: isMobile ? 1.1 : 1.01,
+      scaleY: 1,
+      ease: "power1.out",
+    });
 
-      tl.to(heroSectionRef.current, {
-        paddingLeft: "0.3rem",
-        paddingRight: "0.3rem",
-        ease: "power1.out",
-      });
+    tl.to(heroSectionRef.current, {
+      paddingLeft: "0.3rem",
+      paddingRight: "0.3rem",
+      ease: "power1.out",
+    });
 
-      return () => {
-        if (tl) {
-          tl.kill();
-        }
-      };
-    }, []);
-  };
+    // Refresh ScrollTrigger after a short delay
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
 
-  useGsap();
+    return () => {
+      if (tl) {
+        tl.kill();
+      }
+    };
+  }, []);
 
   const year = new Date().getFullYear();
 
@@ -72,7 +71,7 @@ const Hero = () => {
             src={heroVideo}
             autoPlay
             ref={videoRef}
-            type="video/quicktime"
+            type="video/mp4"
             muted
             loop
             playsInline

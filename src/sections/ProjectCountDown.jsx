@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import side from "../../public/assets/side.jpg";
 
-const ProjectCountDown = () => {
+const ProjectCountDown = ({ setVideoPage }) => {
   const [projectNum, setProjectNum] = useState(0); // Initial count is 0
   const targetNum = 55;
   const [isVisible, setIsVisible] = useState(false); // Tracks if section is visible
@@ -63,7 +63,11 @@ const ProjectCountDown = () => {
           </p>
         </div>
         <div>
-          <img src={side} alt="Countdown illustration" />
+          <img
+            src={side}
+            alt="Countdown illustration"
+            onClick={() => setVideoPage(false)}
+          />
         </div>
       </div>
     </section>

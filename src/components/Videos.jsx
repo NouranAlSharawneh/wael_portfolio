@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Header from "./Header";
 
 const Videos = () => {
   const [videos, setVideos] = useState([]);
@@ -58,66 +57,86 @@ const Videos = () => {
   if (loading) return <div className="loading">Loading...</div>;
 
   return (
-    <>
-      <div className="video-container">
-        {/* Tabs for switching playlists */}
-        <div className="tabs">
-          <button
-            onClick={() => setSelectedPlaylist("playlist1")}
-            className={selectedPlaylist === "playlist1" ? "active" : ""}
-          >
-            Playlist 1
-          </button>
-          <button
-            onClick={() => setSelectedPlaylist("playlist2")}
-            className={selectedPlaylist === "playlist2" ? "active" : ""}
-          >
-            Playlist 2
-          </button>
-        </div>
-
-        {/* Video grid */}
-        <div className="video-grid">
-          {currentVideos.map((video) => (
-            <div key={video.id} className="video-item">
-              <iframe
-                src={`https://www.youtube.com/embed/${video.id}?modestbranding=0&rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=${video.id}`}
-                title={video.title}
-                allowFullScreen
-              />
-              <p className="video-title">{video.title}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Pagination controls */}
-        {totalPages > 0 && (
-          <div className="pagination-container">
+    <div className="container">
+      <div className="wrapper">
+        <h4>Architecture Commerical</h4>
+        <div className="video-container">
+          {/* Tabs for switching playlists */}
+          <div className="tabs">
             <button
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
+              onClick={() => setSelectedPlaylist("playlist1")}
+              className={selectedPlaylist === "playlist1" ? "active" : ""}
             >
-              Previous
+              Architecture Commerical
             </button>
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <button
-                key={page}
-                onClick={() => handlePageChange(page)}
-                className={currentPage === page ? "active" : ""}
-              >
-                {page}
-              </button>
-            ))}
             <button
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
+              onClick={() => setSelectedPlaylist("playlist2")}
+              className={selectedPlaylist === "playlist2" ? "active" : ""}
             >
-              Next
+              Architecture Residential
+            </button>
+            <button
+              onClick={() => setSelectedPlaylist("playlist1")}
+              className={selectedPlaylist === "playlist1" ? "active" : ""}
+            >
+              Architecture Commerical
+            </button>
+            <button
+              onClick={() => setSelectedPlaylist("playlist2")}
+              className={selectedPlaylist === "playlist2" ? "active" : ""}
+            >
+              Architecture Residential
             </button>
           </div>
-        )}
+
+          {/* Video grid */}
+          <div className="video-grid">
+            {currentVideos.map((video) => (
+              <div key={video.id} className="video-item">
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.id}?modestbranding=0&rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=${video.id}`}
+                  title={video.title}
+                  allowFullScreen
+                  style={{ border: "none" }}
+                  width={"400px"}
+                  height={"200px"}
+                />
+                <p className="video-title">{video.title}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Pagination controls */}
+          {totalPages > 0 && (
+            <div className="pagination-container">
+              <button
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                Previous
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                (page) => (
+                  <button
+                    key={page}
+                    onClick={() => handlePageChange(page)}
+                    className={currentPage === page ? "active" : ""}
+                  >
+                    {page}
+                  </button>
+                )
+              )}
+              <button
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
+            </div>
+          )}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
