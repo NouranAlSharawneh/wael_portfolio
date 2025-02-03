@@ -62,35 +62,32 @@ const Hero = () => {
   const year = new Date().getFullYear();
 
   return (
-    <>
-      <Header />
-      <section ref={heroSectionRef} className="hero-section">
-        <div className="content">
-          <h1 ref={titleRef}>
-            Port<span>folio </span>
-          </h1>
-          <div className="img">
-            <video
-              src={heroVideo}
-              autoPlay
-              ref={videoRef}
-              type="video/quicktime"
-              muted
-              loop
-              playsInline
-            />
-            <div className="hero-text">
-              <p>
-                Wael Al-Sharawneh -{year}
-                <span>
-                  This website showcases all my work, created exclusively by me.
-                </span>
-              </p>
-            </div>
+    <section ref={heroSectionRef} className="hero-section">
+      <div className="content">
+        <h1 ref={titleRef}>
+          Port<span>folio </span>
+        </h1>
+        <div className="img">
+          <video
+            src={heroVideo}
+            autoPlay
+            ref={videoRef}
+            type="video/quicktime"
+            muted
+            loop
+            playsInline
+          />
+          <div className="hero-text">
+            <p>
+              Wael Al-Sharawneh -{year}
+              <span>
+                This website showcases all my work, created exclusively by me.
+              </span>
+            </p>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

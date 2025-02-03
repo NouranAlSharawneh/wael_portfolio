@@ -1,4 +1,6 @@
 import Divider from "./components/Divider";
+import Header from "./components/Header";
+import Videos from "./components/Videos";
 import About from "./sections/About";
 import Creations from "./sections/Creations";
 import Hero from "./sections/Hero";
@@ -9,6 +11,8 @@ import Types from "./sections/Types";
 const App = () => {
   return (
     <>
+      {/* <Videos /> */}
+      <Header />
       <Hero />
       <Divider />
       <About />
