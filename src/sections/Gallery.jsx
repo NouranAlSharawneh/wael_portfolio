@@ -1,7 +1,7 @@
 import Image1 from "../../public/assets/projectImgs/image1.JPG";
 // import Image2 from "../../public/assets/projectImgs/image2.png";
 import Image3 from "../../public/assets/projectImgs/image3.JPG";
-import Image4 from "../../public/assets/projectImgs/image4.png";
+// import Image4 from "../../public/assets/projectImgs/image4.png";
 import Image5 from "../../public/assets/projectImgs/image5.JPG";
 import Image6 from "../../public/assets/projectImgs/image6.JPG";
 import Image7 from "../../public/assets/projectImgs/image7.JPG";
@@ -42,7 +42,7 @@ const Gallery = () => {
       scale: scale6,
     },
     {
-      src: Image4,
+      src: Image11,
       scale: scale5,
     },
     {
