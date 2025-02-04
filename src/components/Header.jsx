@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { IoCloseSharp } from "react-icons/io5";
+import { RiMenu3Fill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -9,9 +12,11 @@ const Header = () => {
   return (
     <header>
       <div className="nav_menu">
-        <div className="nav_logo">
-          <p>Wael Al-Sharawneh</p>
-        </div>
+        <Link to="/">
+          <div className="nav_logo">
+            <p>Wael Al-Sharawneh</p>
+          </div>
+        </Link>
         <div className="nav_items">
           <nav>
             <ul>
@@ -30,7 +35,9 @@ const Header = () => {
           </a>
           <a href="#">Contact</a>
         </div>
-        <button onClick={handleMenu}>{menu ? "Close" : "Menu"}</button>
+        <button onClick={handleMenu}>
+          {menu ? <IoCloseSharp /> : <RiMenu3Fill />}
+        </button>
       </div>
       {menu && (
         <div className="mobile_menu">
