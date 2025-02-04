@@ -4,6 +4,9 @@ const About = () => {
     <section className="about-section">
       <div className="about_wrapper">
         <div className="about_mainLayout">
+          <div className="about_title">
+            <h4>About Me</h4>
+          </div>
           <div className="about_textArea">
             <p>
               I am Wael ALsharawneh, a qualified architect and interior designer
@@ -22,10 +25,7 @@ const About = () => {
               industry.
             </p>
           </div>
-          <div className="about_avatar">
-            <h4>About Me</h4>
-            <div className="about_avatar_img"></div>
-          </div>
+          <div className="about_avatar_img"></div>
         </div>
       </div>
     </section>

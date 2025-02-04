@@ -1,10 +1,16 @@
 .countdown-section {
   background-color: var(--bunker-blue);
-  height: 80dvh;
+  height: 100dvh;
   padding: 0 3rem 3rem 3rem;
 }
 
+.countdown_wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
 .countdown-grid {
+  padding-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
@@ -19,19 +25,21 @@
 }
 
 .countdown-content p {
-  margin-top: auto;
+  margin-top: 3rem;
   text-wrap: balance;
+}
+.countdown-image {
+  justify-self: right;
+}
+
+.countdown-image img {
+  height: 60vh;
 }
 
 @media screen and (max-width: 50em) {
-  .countdown-section {
-    background-color: var(--bunker-blue);
-    height: 100dvh;
-  }
   .countdown-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    height: max-content;
     gap: 2rem;
   }
 

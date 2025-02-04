@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Divider from "./components/Divider";
 import Header from "./components/Header";
 import Videos from "./components/Videos";
@@ -7,9 +7,20 @@ import Creations from "./sections/Creations";
 import Hero from "./sections/Hero";
 import Message from "./sections/Message";
 import ProjectCountDown from "./sections/ProjectCountDown";
+import Gallery from "./sections/Gallery";
 import Types from "./sections/Types";
+import Lenis from "lenis";
 
 const App = () => {
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+
   const [videoPage, setVideoPage] = useState(true);
 
   return (
@@ -24,6 +35,7 @@ const App = () => {
           <Divider />
           <Creations />
           <ProjectCountDown setVideoPage={setVideoPage} />
+          <Gallery />
           <Types />
         </main>
       ) : (
