@@ -10,6 +10,7 @@
 @import "./sections/projectCountDown.css";
 @import "./components/videos.css";
 @import "./sections/gallery.css";
+@import "./sections/contactForm.css";
 
 :root {
   font-feature-settings: "ss02", "ss08";

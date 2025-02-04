@@ -1,18 +1,31 @@
 import { useState, useEffect } from "react";
+import { useLocation, useSearchParams } from "react-router-dom";
 
 const Videos = () => {
   const [videos, setVideos] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedPlaylist, setSelectedPlaylist] = useState("playlist1"); // Track selected playlist
-  const VIDEOS_PER_PAGE = 6;
+
+  // Read query parameters
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
+  const playlistIdFromUrl = searchParams.get("playlistId");
 
   // Define playlist IDs for each tab
   const playlists = {
     playlist1: "PLeEExte-NV5k1EGgG-ZF_BwVSaGzammoR", // First playlist
     playlist2: "PLeEExte-NV5l792UiD24XLgan-mra2r3D", // Second playlist
+    playlist3: "ANOTHER_PLAYLIST_ID", // Third playlist
+    playlist4: "YET_ANOTHER_PLAYLIST_ID", // Fourth playlist
   };
+
+  // Determine the default selected playlist based on the URL or fallback to "playlist1"
+  const initialPlaylist =
+    Object.keys(playlists).find(
+      (key) => playlists[key] === playlistIdFromUrl
+    ) || "playlist1";
+  const [selectedPlaylist, setSelectedPlaylist] = useState(initialPlaylist);
 
   useEffect(() => {
     const fetchPlaylistVideos = async () => {
@@ -41,7 +54,7 @@ const Videos = () => {
     fetchPlaylistVideos();
   }, [selectedPlaylist]); // Refetch when selectedPlaylist changes
 
-  // Pagination variables
+  const VIDEOS_PER_PAGE = 6;
   const totalPages = Math.ceil(videos.length / VIDEOS_PER_PAGE);
   const currentVideos = videos.slice(
     (currentPage - 1) * VIDEOS_PER_PAGE,
@@ -59,7 +72,7 @@ const Videos = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <h4>Architecture Commerical</h4>
+        <h4>Architecture Commercial</h4>
         <div className="video-container">
           {/* Tabs for switching playlists */}
           <div className="tabs">
@@ -67,7 +80,7 @@ const Videos = () => {
               onClick={() => setSelectedPlaylist("playlist1")}
               className={selectedPlaylist === "playlist1" ? "active" : ""}
             >
-              Architecture Commerical
+              Architecture Commercial
             </button>
             <button
               onClick={() => setSelectedPlaylist("playlist2")}
@@ -76,16 +89,16 @@ const Videos = () => {
               Architecture Residential
             </button>
             <button
-              onClick={() => setSelectedPlaylist("playlist1")}
-              className={selectedPlaylist === "playlist1" ? "active" : ""}
+              onClick={() => setSelectedPlaylist("playlist3")}
+              className={selectedPlaylist === "playlist3" ? "active" : ""}
             >
-              Architecture Commerical
+              Interior Design
             </button>
             <button
-              onClick={() => setSelectedPlaylist("playlist2")}
-              className={selectedPlaylist === "playlist2" ? "active" : ""}
+              onClick={() => setSelectedPlaylist("playlist4")}
+              className={selectedPlaylist === "playlist4" ? "active" : ""}
             >
-              Architecture Residential
+              Other Projects
             </button>
           </div>
 

@@ -1,5 +1,6 @@
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import image from "../../public/assets/projectImgs/image6.JPG";
+import { Link } from "react-router-dom";
 const Creations = () => {
   return (
     <section className="creations-section">
@@ -18,24 +19,30 @@ const Creations = () => {
         <div className="creation-side-area">
           <span>&#x2197;</span>
           <div className="creation-side-area_buttons">
-            <div className="creation-side_btns">
-              <p>All Projects</p>
-              <span>
-                <FaArrowUpRightFromSquare size={13} />
-              </span>
-            </div>
-            <div className="creation-side_btns">
-              <p>Interior Projects</p>
-              <span>
-                <FaArrowUpRightFromSquare size={13} />
-              </span>
-            </div>
-            <div className="creation-side_btns">
-              <p>Architecture Projects</p>
-              <span>
-                <FaArrowUpRightFromSquare size={13} />
-              </span>
-            </div>
+            <Link to="/videos">
+              <div className="creation-side_btns">
+                <p>All Projects</p>
+                <span>
+                  <FaArrowUpRightFromSquare size={13} />
+                </span>
+              </div>
+            </Link>
+            <Link to="/videos?playlistId=PLeEExte-NV5k1EGgG-ZF_BwVSaGzammoR">
+              <div className="creation-side_btns">
+                <p>Interior Projects</p>
+                <span>
+                  <FaArrowUpRightFromSquare size={13} />
+                </span>
+              </div>
+            </Link>
+            <Link to="/videos?playlistId=PLeEExte-NV5l792UiD24XLgan-mra2r3D">
+              <div className="creation-side_btns">
+                <p>Architecture Projects</p>
+                <span>
+                  <FaArrowUpRightFromSquare size={13} />
+                </span>
+              </div>
+            </Link>
           </div>
           <p>
             I strive to design thoughtful and sustainable spaces that can serve

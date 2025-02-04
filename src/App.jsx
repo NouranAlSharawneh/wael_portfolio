@@ -1,4 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Divider from "./components/Divider";
 import Header from "./components/Header";
 import Videos from "./components/Videos";
@@ -10,6 +16,7 @@ import ProjectCountDown from "./sections/ProjectCountDown";
 import Gallery from "./sections/Gallery";
 import Types from "./sections/Types";
 import Lenis from "lenis";
+import ContactForm from "./sections/ContactForm";
 
 const App = () => {
   useEffect(() => {
@@ -21,27 +28,36 @@ const App = () => {
     requestAnimationFrame(raf);
   }, []);
 
-  const [videoPage, setVideoPage] = useState(true);
-
   return (
-    <>
+    <Router>
       <Header />
-      {videoPage ? (
-        <main>
-          <Hero />
-          <Divider />
-          <About />
-          <Message />
-          <Divider />
-          <Creations />
-          <ProjectCountDown setVideoPage={setVideoPage} />
-          <Gallery />
-          <Types />
-        </main>
-      ) : (
-        <Videos />
-      )}
-    </>
+      <Routes>
+        {/* Default route */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <Divider />
+              <About />
+              <Message />
+              <Divider />
+              <Creations />
+              <ProjectCountDown />
+              <Gallery />
+              <ContactForm />
+              <Types />
+            </>
+          }
+        />
+
+        {/* Route for the Videos page */}
+        <Route path="/videos" element={<Videos />} />
+
+        {/* Redirect unknown routes to the home page */}
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
   );
 };
 
