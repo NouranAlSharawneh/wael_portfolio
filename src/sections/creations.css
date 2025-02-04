@@ -121,6 +121,7 @@
 @media screen and (max-width: 50em) {
   .creations-section {
     padding: 0 2rem;
+    height: 130dvh;
   }
 
   .creation-layout {
