@@ -14,9 +14,12 @@
   font-feature-settings: "ss02", "ss08";
   font-family: Aeonik, "Source Han Sans JP", Arial, Helvetica, sans-serif;
 
-  --bunker-blue: #0a0e14;
+  --bunker-blue: #ffffff;
   --rock-blue: #96b4c8;
-  --concrete-white: #f5f5f5;
+  --concrete-white: #000000;
+  /* --bunker-blue: #0a0e14;
+  --rock-blue: #96b4c8;
+  --concrete-white: #f5f5f5; */
   --mist-grey: #e4e4e4;
 }
 
@@ -38,6 +41,7 @@ html {
 
 body {
   overflow-x: hidden;
+  background: var(--bunker-blue);
 }
 
 img,

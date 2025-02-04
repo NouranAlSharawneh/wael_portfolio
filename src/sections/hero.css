@@ -1,5 +1,5 @@
 .hero-section {
-  height: 100dvh;
+  height: 200dvh;
   background-color: var(--bunker-blue);
   overflow-x: hidden;
   transition: padding-left 0.9s ease-out, padding-right 0.9s ease-out;
@@ -51,9 +51,11 @@
 
 .hero-text p {
   font-weight: 200;
+  color: white;
 }
 
 .hero-text span {
+  color: white;
   line-height: 1.5;
   font-weight: 100;
   display: block;

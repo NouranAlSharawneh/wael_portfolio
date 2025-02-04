@@ -80,7 +80,8 @@ const Hero = () => {
             <p>
               Wael Al-Sharawneh -{year}
               <span>
-                This website showcases all my work, created exclusively by me.
+                This website showcases some of my work, all work is created
+                exclusively by me.
               </span>
             </p>
           </div>

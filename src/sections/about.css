@@ -1,89 +1,54 @@
 .about-section {
   z-index: 3;
   position: relative;
-  height: 100vh;
+  height: 100dvh;
+
   padding: 0 3rem 3rem 3rem;
   background-color: var(--bunker-blue);
 }
 
-.main-layout {
-  padding-top: 0.6rem;
-  display: grid;
-  grid-template-columns: 0.8fr 1fr;
-  grid-template-rows: 0.4fr 1fr;
-  row-gap: 3rem;
+.about_wrapper {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding-top: 5rem;
 }
 
-.main-text {
+.about_mainLayout {
+  display: flex;
+  height: 100%;
+  gap: 5rem;
+}
+
+.about_textArea {
   width: 70%;
 }
 
-.main-text span {
-  font-size: 0.8rem;
-  font-weight: 100;
-}
-
-.main-text p {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-top: 2rem;
+.about_textArea p {
+  color: var(--concrete-white);
+  text-align: justify;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 
-.main-title h2 {
-  margin-top: 2.5rem;
-  font-weight: 300;
-  font-size: 8rem;
-  text-align: right;
-  justify-content: end;
-}
-
-.main-side_content span {
-  display: flex;
-  color: var(--rock-blue);
-  font-size: 10rem;
-  line-height: 0.5;
-  font-weight: 900;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  transition: transform 0.7s ease;
-}
-
-.main-side_content span:hover {
-  transform: rotate(3deg) translateY(-10px);
-}
-
-.main-side_img {
-  display: flex;
-  gap: 2rem;
-  align-items: end;
-}
-
-.main-side_img img {
-  clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
-  object-fit: cover;
-  border-radius: 1rem;
-}
-
-.main-side_img .main-img_desc {
-  font-size: 0.9rem;
-  font-weight: 200;
-}
-
-.main-img {
-  display: flex;
-  align-items: right;
-  justify-content: right;
-}
-
-.main-img {
-  height: 100%;
+.about_avatar {
   width: 100%;
-  border-radius: 1rem;
-  background-image: url("../../public/assets/buliding.jpg");
+  display: grid;
+  justify-content: end;
+  gap: 2rem;
+}
+
+.about_avatar h4 {
+  color: var(--concrete-white);
+  font-size: 5rem;
+  line-height: 0.8;
+}
+
+.about_avatar_img {
+  width: 100%;
+  height: 50vh;
+  background-image: url("/assets/avatarDark.JPG");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
   clip-path: polygon(28% 13%, 32% 0, 100% 0, 100% 100%, 0 100%, 0 13%);
 }
 
@@ -91,34 +56,30 @@
   .about-section {
     padding: 0 2rem;
   }
-  .main-layout {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.25fr 0.5fr 0.5fr;
-    grid-template-areas:
-      "main-text"
-      "main-title"
-      "main-side_content"
-      "main-img";
+
+  .about_mainLayout {
+    flex-direction: column-reverse;
+    gap: 2rem;
   }
-  .main-text {
+
+  .about_textArea {
     width: 100%;
   }
-  .main-title h2 {
-    margin-top: 0rem;
-    font-size: 5rem;
-    justify-self: center;
-    text-align: left;
+
+  .about_avatar {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
   }
 
-  .main-side_content span {
-    font-size: 9rem;
-    line-height: 0;
-    font-weight: 900;
-    margin-bottom: 1rem;
+  .about_avatar h4 {
+    text-align: center;
+    font-size: 3rem;
   }
 
-  .main-side_img {
-    flex-direction: column;
-    align-items: start;
+  .about_avatar_img {
+    width: 100%;
+    height: 50vh;
+    background-position: 50% 100%;
   }
 }
