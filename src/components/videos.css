@@ -43,7 +43,7 @@
   height: 0;
   overflow: hidden;
   place-self: center;
-  background-color: black;
+  background-color: var(--mist-gray);
   border-radius: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
 }
@@ -75,18 +75,18 @@
   background-color: transparent;
   display: block;
   border-radius: 4px;
-  color: #333;
+  color: #8a8a8a;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .pagination-container button:hover:not(:disabled) {
   background: var(--rock-blue);
-  color: white;
+  color: var(--bunker-blue);
 }
 
 .pagination-container button.active {
-  color: white;
+  color: var(--concrete-white);
   font-size: 1.2rem;
   line-height: 0.1;
 }
@@ -107,9 +107,9 @@
   cursor: pointer;
   display: block;
   padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  background-color: black;
-  color: var(--concrete-white);
+  border-radius: 0.5rem;
+  background-color: var(--rock-blue);
+  color: var(--bunker-blue);
   border: none;
   font-size: 1rem;
 }

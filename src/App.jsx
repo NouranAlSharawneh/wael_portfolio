@@ -36,7 +36,7 @@ const App = () => {
         <Route
           path="/"
           element={
-            <>
+            <main>
               <Hero />
               <Divider />
               <About />
@@ -47,7 +47,7 @@ const App = () => {
               <Gallery />
               <ContactForm />
               <Types />
-            </>
+            </main>
           }
         />
 

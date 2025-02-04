@@ -1,37 +1,55 @@
 import { useState, useEffect } from "react";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 
 const Videos = () => {
   const [videos, setVideos] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  // Read query parameters
-  const location = useLocation();
+  const [selectedPlaylist, setSelectedPlaylist] = useState("playlist1"); // Track selected playlist
+  const VIDEOS_PER_PAGE = 6;
   const [searchParams] = useSearchParams();
-  const playlistIdFromUrl = searchParams.get("playlistId");
+  const playlistIdFromURL = searchParams.get("playlistId");
+  const navigate = useNavigate();
 
-  // Define playlist IDs for each tab
+  // Define playlist IDs and titles for each tab
   const playlists = {
-    playlist1: "PLeEExte-NV5k1EGgG-ZF_BwVSaGzammoR", // First playlist
-    playlist2: "PLeEExte-NV5l792UiD24XLgan-mra2r3D", // Second playlist
-    playlist3: "ANOTHER_PLAYLIST_ID", // Third playlist
-    playlist4: "YET_ANOTHER_PLAYLIST_ID", // Fourth playlist
+    playlist1: {
+      id: "PLeEExte-NV5k1EGgG-ZF_BwVSaGzammoR",
+      title: "Architecture Commercial",
+    },
+    playlist2: {
+      id: "PLeEExte-NV5l792UiD24XLgan-mra2r3D",
+      title: "Architecture Residential",
+    },
+    playlist3: {
+      id: "PLeEExte-NV5kxOK2YHMrgkIJ6_L2Zw5Mc",
+      title: "Interior Design Residential",
+    },
+    playlist4: {
+      id: "PLeEExte-NV5l8Eunk7QNlZtP3GTnqNuE7",
+      title: "Interior Design Commercial",
+    },
   };
 
-  // Determine the default selected playlist based on the URL or fallback to "playlist1"
-  const initialPlaylist =
-    Object.keys(playlists).find(
-      (key) => playlists[key] === playlistIdFromUrl
-    ) || "playlist1";
-  const [selectedPlaylist, setSelectedPlaylist] = useState(initialPlaylist);
+  // Set the default selected playlist based on the URL
+  useEffect(() => {
+    if (playlistIdFromURL) {
+      // Find the playlist key that matches the `playlistId` from the URL
+      const playlistKey = Object.keys(playlists).find(
+        (key) => playlists[key].id === playlistIdFromURL
+      );
+      if (playlistKey) {
+        setSelectedPlaylist(playlistKey);
+      }
+    }
+  }, [playlistIdFromURL, playlists]);
 
   useEffect(() => {
     const fetchPlaylistVideos = async () => {
       try {
         const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
-        const playlistId = playlists[selectedPlaylist]; // Get playlist ID based on selection
+        const playlistId = playlists[selectedPlaylist]?.id; // Get playlist ID based on selection
         const response = await fetch(
           `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${playlistId}&key=${apiKey}`
         );
@@ -52,9 +70,9 @@ const Videos = () => {
       }
     };
     fetchPlaylistVideos();
-  }, [selectedPlaylist]); // Refetch when selectedPlaylist changes
+  }, [playlists, selectedPlaylist]); // Refetch when selectedPlaylist changes
 
-  const VIDEOS_PER_PAGE = 6;
+  // Pagination variables
   const totalPages = Math.ceil(videos.length / VIDEOS_PER_PAGE);
   const currentVideos = videos.slice(
     (currentPage - 1) * VIDEOS_PER_PAGE,
@@ -66,40 +84,42 @@ const Videos = () => {
     setCurrentPage(page);
   };
 
+  // Function to handle tab clicks
+  const handleTabClick = (key) => {
+    setSelectedPlaylist(key);
+    const playlistId = playlists[key]?.id;
+    navigate(`/videos?playlistId=${playlistId}`); // Update the URL with the new playlistId
+  };
+
   if (error) return <div className="error">Error: {error}</div>;
   if (loading) return <div className="loading">Loading...</div>;
+
+  // Get the title of the currently selected playlist
+  const selectedPlaylistTitle = playlists[selectedPlaylist]?.title;
 
   return (
     <div className="container">
       <div className="wrapper">
-        <h4>Architecture Commercial</h4>
+        {/* Dynamically display the selected playlist title */}
+        <h4>{selectedPlaylistTitle}</h4>
         <div className="video-container">
           {/* Tabs for switching playlists */}
           <div className="tabs">
-            <button
-              onClick={() => setSelectedPlaylist("playlist1")}
-              className={selectedPlaylist === "playlist1" ? "active" : ""}
-            >
-              Architecture Commercial
-            </button>
-            <button
-              onClick={() => setSelectedPlaylist("playlist2")}
-              className={selectedPlaylist === "playlist2" ? "active" : ""}
-            >
-              Architecture Residential
-            </button>
-            <button
-              onClick={() => setSelectedPlaylist("playlist3")}
-              className={selectedPlaylist === "playlist3" ? "active" : ""}
-            >
-              Interior Design
-            </button>
-            <button
-              onClick={() => setSelectedPlaylist("playlist4")}
-              className={selectedPlaylist === "playlist4" ? "active" : ""}
-            >
-              Other Projects
-            </button>
+            {Object.keys(playlists)
+              .filter(
+                (key) =>
+                  playlists[key].title.split(" ")[0] ===
+                  playlists[selectedPlaylist].title.split(" ")[0]
+              )
+              .map((key) => (
+                <button
+                  key={key}
+                  onClick={() => handleTabClick(key)}
+                  className={selectedPlaylist === key ? "active" : ""}
+                >
+                  {playlists[key].title}
+                </button>
+              ))}
           </div>
 
           {/* Video grid */}

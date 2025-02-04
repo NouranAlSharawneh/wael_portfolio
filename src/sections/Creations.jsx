@@ -27,7 +27,7 @@ const Creations = () => {
                 </span>
               </div>
             </Link>
-            <Link to="/videos?playlistId=PLeEExte-NV5k1EGgG-ZF_BwVSaGzammoR">
+            <Link to="/videos?playlistId=PLeEExte-NV5l8Eunk7QNlZtP3GTnqNuE7">
               <div className="creation-side_btns">
                 <p>Interior Projects</p>
                 <span>
