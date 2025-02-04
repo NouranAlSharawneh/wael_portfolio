@@ -40,7 +40,7 @@
 @media screen and (max-width: 50em) {
   .message-section {
     background-position: center left;
-    height: 150dvh;
+    height: 130dvh;
     padding-top: 9rem;
   }
   .message-section h4 {

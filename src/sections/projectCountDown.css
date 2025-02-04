@@ -39,7 +39,7 @@
 
 @media screen and (max-width: 50em) {
   .countdown-section {
-    height: 200dvh;
+    height: 160dvh;
   }
   .countdown-grid {
     grid-template-columns: 1fr;

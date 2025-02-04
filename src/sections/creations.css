@@ -180,6 +180,10 @@
     font-size: 0.8rem;
     font-weight: 100;
     line-height: 1.5;
-    text-align: right;
+    text-align: left;
+  }
+
+  .creation-side_btns {
+    padding-bottom: 1rem;
   }
 }
