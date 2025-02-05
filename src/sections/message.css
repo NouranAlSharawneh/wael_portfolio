@@ -40,11 +40,11 @@
 @media screen and (max-width: 50em) {
   .message-section {
     background-position: center left;
-    height: 210dvh;
+    height: 100dvh;
   }
   .message-section h4 {
     width: 100%;
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 }
