@@ -74,6 +74,7 @@
   height: 100%;
   grid-area: 2/3;
   gap: 1rem;
+  z-index: 30;
 }
 
 .creation-side-area_buttons {
@@ -112,9 +113,19 @@
   padding: 0.5rem 0;
 }
 
+.creation-side_btns p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem 1rem 2rem;
+  border-radius: 0.5rem;
+  color: var(--bunker-blue);
+  background-color: var(--rock-blue);
+}
+
 .creation-side_btns p:hover,
 .creation-side_btns span:hover {
-  color: var(--rock-blue);
+  color: var(--concrete-white);
   transition: transform 0.5s ease-in-out;
   transform: scale(1.1);
   transition: all 0.8s ease-in-out;
@@ -173,13 +184,11 @@
   }
 
   .creation-side-area span {
-    display: flex;
-    align-items: right;
-    justify-content: end;
-    color: var(--rock-blue);
-    font-size: 10rem;
-    line-height: 0.5;
-    font-weight: 900;
+    display: none;
+  }
+
+  .creation-side_btns span {
+    display: block;
   }
 
   .creation-side-area p {

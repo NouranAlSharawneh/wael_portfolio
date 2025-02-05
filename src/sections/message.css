@@ -42,6 +42,7 @@
   .message-section {
     background-position: center left;
     height: 110dvh;
+    top: -10rem;
   }
   .message-section h4 {
     width: 100%;

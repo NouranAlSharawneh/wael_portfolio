@@ -17,30 +17,36 @@ const Creations = () => {
           <h5>Projects</h5>
         </div>
         <div className="creation-side-area">
-          {/* <span>&#x2197;</span> */}
+          <span>&#x2197;</span>
           <div className="creation-side-area_buttons">
             <Link to="/videos">
               <div className="creation-side_btns">
-                <p>All Projects</p>
-                <span>
-                  <FaArrowUpRightFromSquare size={13} />
-                </span>
+                <p>
+                  All Projects
+                  <span>
+                    <FaArrowUpRightFromSquare fill="#ffffff" size={13} />
+                  </span>
+                </p>
               </div>
             </Link>
             <Link to="/videos?playlistId=PLeEExte-NV5l8Eunk7QNlZtP3GTnqNuE7">
               <div className="creation-side_btns">
-                <p>Interior Projects</p>
-                <span>
-                  <FaArrowUpRightFromSquare size={13} />
-                </span>
+                <p>
+                  Interior Projects{" "}
+                  <span>
+                    <FaArrowUpRightFromSquare fill="#ffffff" size={13} />
+                  </span>
+                </p>
               </div>
             </Link>
             <Link to="/videos?playlistId=PLeEExte-NV5l792UiD24XLgan-mra2r3D">
               <div className="creation-side_btns">
-                <p>Architecture Projects</p>
-                <span>
-                  <FaArrowUpRightFromSquare size={13} />
-                </span>
+                <p>
+                  Architecture Projects
+                  <span>
+                    <FaArrowUpRightFromSquare fill="#ffffff" size={13} />
+                  </span>
+                </p>
               </div>
             </Link>
           </div>
