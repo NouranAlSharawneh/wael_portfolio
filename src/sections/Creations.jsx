@@ -17,7 +17,7 @@ const Creations = () => {
           <h5>Projects</h5>
         </div>
         <div className="creation-side-area">
-          <span>&#x2197;</span>
+          {/* <span>&#x2197;</span> */}
           <div className="creation-side-area_buttons">
             <Link to="/videos">
               <div className="creation-side_btns">
