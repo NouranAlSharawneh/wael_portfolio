@@ -16,6 +16,7 @@ import ProjectCountDown from "./sections/ProjectCountDown";
 import Gallery from "./sections/Gallery";
 import Lenis from "lenis";
 import ContactForm from "./sections/ContactForm";
+import Footer from "./sections/Footer";
 
 const App = () => {
   useEffect(() => {
@@ -44,6 +45,7 @@ const App = () => {
               <ProjectCountDown />
               <Gallery />
               <ContactForm />
+              <Footer />
             </main>
           }
         />
