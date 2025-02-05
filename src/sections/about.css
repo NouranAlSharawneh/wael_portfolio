@@ -55,6 +55,7 @@
 @media screen and (max-width: 50em) {
   .about-section {
     padding: 0 2rem;
+    height: 130dvh;
   }
 
   .about_mainLayout {

@@ -78,5 +78,6 @@
   .gallery-section {
     padding: 0;
     padding-bottom: 2rem;
+    height: 600dvh;
   }
 }
