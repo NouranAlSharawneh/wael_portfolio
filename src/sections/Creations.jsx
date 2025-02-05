@@ -45,9 +45,10 @@ const Creations = () => {
             </Link>
           </div>
           <p>
-            I strive to design thoughtful and sustainable spaces that can serve
-            and inspire future generations, blending architecture and interior
-            design to create environments that stand the test of time.
+            Over the past years, I have established myself as a trusted partner.
+            My unwavering commitment to delivering exceptional value and quality
+            positions me as a significant player in both residential and
+            commercial urban development.
           </p>
         </div>
       </div>

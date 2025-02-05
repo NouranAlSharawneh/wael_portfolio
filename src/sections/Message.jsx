@@ -61,12 +61,17 @@ const Message = () => {
   return (
     <section className="message-section">
       <h4 ref={textRef}>
-        Their attention to details and ability to merge{" "}
+        I strive to design thoughtful and sustainable spaces that can serve and
+        inspire future generations, blending architecture and interior design to
+        create environments that stand the test of time.
+        {/* Their attention to details and ability to merge{" "}
         <div className="message-img" ref={imgRef}></div> aesthetics with
-        functionality exceeded our expectations.
+        functionality exceeded our expectations. */}
       </h4>
     </section>
   );
 };
 
 export default Message;
+
+//

@@ -1,8 +1,8 @@
 .gallery-section {
   height: 400vh;
   padding: 0 0rem 3rem 0rem;
-  background-color: var(--bunker-blue);
-  position: relative;
+  background-color: red;
+  /* position: relative; */
 }
 
 .gallery_sticky {

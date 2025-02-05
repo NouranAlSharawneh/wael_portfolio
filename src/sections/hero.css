@@ -2,6 +2,8 @@
   height: 200dvh;
   background-color: var(--bunker-blue);
   overflow-x: hidden;
+  position: sticky;
+  top: 0;
   transition: padding-left 0.9s ease-out, padding-right 0.9s ease-out;
 }
 

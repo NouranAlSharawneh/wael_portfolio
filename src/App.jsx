@@ -14,7 +14,6 @@ import Hero from "./sections/Hero";
 import Message from "./sections/Message";
 import ProjectCountDown from "./sections/ProjectCountDown";
 import Gallery from "./sections/Gallery";
-import Types from "./sections/Types";
 import Lenis from "lenis";
 import ContactForm from "./sections/ContactForm";
 
@@ -32,7 +31,6 @@ const App = () => {
     <Router>
       <Header />
       <Routes>
-        {/* Default route */}
         <Route
           path="/"
           element={
@@ -46,15 +44,12 @@ const App = () => {
               <ProjectCountDown />
               <Gallery />
               <ContactForm />
-              <Types />
             </main>
           }
         />
 
-        {/* Route for the Videos page */}
         <Route path="/videos" element={<Videos />} />
 
-        {/* Redirect unknown routes to the home page */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

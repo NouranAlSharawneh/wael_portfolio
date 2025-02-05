@@ -2,7 +2,7 @@
   background-color: var(--bunker-blue);
   height: 100dvh;
   padding: 0 3rem 3rem 3rem;
-  position: relative;
+  /* position: relative; */
 }
 
 .countdown_wrapper {
