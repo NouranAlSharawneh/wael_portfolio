@@ -1,5 +1,6 @@
 .message-section {
-  /* position: relative; */
+  position: sticky;
+  top: -15rem;
   background-color: var(--bunker-blue);
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../../public/assets/gradient.jpg");
@@ -7,19 +8,19 @@
   background-position: center right;
   background-repeat: no-repeat; */
   padding: 0 3rem 3rem 3rem;
-  height: 150dvh;
+  height: 130dvh;
   display: flex;
-  align-items: end;
-  justify-content: end;
+  align-items: start;
+  justify-content: start;
   background-blend-mode: difference;
 }
 
 .message-section h4 {
-  width: 85%;
+  width: 100%;
   text-align: right;
-  font-size: 6.5rem;
+  font-size: 5.3rem;
   font-weight: 300;
-  overflow: hidden; /* Ensures words stay within bounds during animation */
+  padding-bottom: 5;
 }
 
 .message-section h4 .word {
@@ -40,7 +41,7 @@
 @media screen and (max-width: 50em) {
   .message-section {
     background-position: center left;
-    height: 160dvh;
+    height: 110dvh;
   }
   .message-section h4 {
     width: 100%;

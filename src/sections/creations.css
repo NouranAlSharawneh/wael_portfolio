@@ -1,4 +1,7 @@
 .creations-section {
+  position: sticky;
+  top: 10vh;
+  z-index: 13;
   background-color: var(--bunker-blue);
   height: 100dvh;
   padding: 0 3rem 3rem 3rem;

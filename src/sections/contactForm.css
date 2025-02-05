@@ -1,8 +1,10 @@
 .contact-form-container {
   height: 100dvh;
-  max-width: 80rem;
+  /* max-width: 80rem; */
   margin: 0 auto;
   padding: 2rem;
+  z-index: 30;
+  position: sticky;
   padding-top: 2rem;
   background: #fff;
   border-radius: 8px;

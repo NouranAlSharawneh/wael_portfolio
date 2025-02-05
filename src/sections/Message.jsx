@@ -29,7 +29,7 @@ const Message = () => {
         scrollTrigger: {
           trigger: textElement,
           start: "top 80%",
-          end: "bottom 20%",
+          end: "bottom 10%",
           scrub: 1,
         },
       }
@@ -59,8 +59,8 @@ const Message = () => {
   }, []);
 
   return (
-    <section className="message-section">
-      <h4 ref={textRef}>
+    <section className="message-section" ref={textRef}>
+      <h4>
         I strive to design thoughtful and sustainable spaces that can serve and
         inspire future generations, blending architecture and interior design to
         create environments that stand the test of time.
