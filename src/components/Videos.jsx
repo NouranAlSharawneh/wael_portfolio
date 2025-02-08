@@ -127,6 +127,7 @@ const Videos = () => {
             {currentVideos.map((video) => (
               <div key={video.id} className="video-item">
                 <iframe
+                  className="movie-player"
                   src={`https://www.youtube.com/embed/${video.id}?modestbranding=0&rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=${video.id}`}
                   title={video.title}
                   allowFullScreen
