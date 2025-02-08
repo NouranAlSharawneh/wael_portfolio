@@ -2,9 +2,13 @@
   height: 200dvh;
   background-color: var(--bunker-blue);
   overflow-x: hidden;
-  position: sticky;
+  position: relative;
   top: 0;
   transition: padding-left 0.9s ease-out, padding-right 0.9s ease-out;
+}
+
+.relative-hero {
+  position: sticky;
 }
 
 .content {
