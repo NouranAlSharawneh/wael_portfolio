@@ -1,22 +1,4 @@
-import { useEffect } from "react";
-
 const Modal = ({ title, setOpenModal, openModal, children }) => {
-  // useEffect(() => {
-  //   if (openModal) {
-  //     document.body.style.overflow = "hidden";
-  //     document.getElementById("countdown-section").style.position = "fixed";
-  //     document.body.style.width = "100%";
-  //   } else {
-  //     document.body.style.overflow = "auto";
-  //     document.getElementById("countdown-section").style.position = "relative";
-  //   }
-
-  //   return () => {
-  //     document.body.style.overflow = "auto";
-  //     document.getElementById("countdown-section").style.position = "relative";
-  //   };
-  // }, [openModal]);
-
   return (
     <div
       onClick={() => setOpenModal(false)}
@@ -26,8 +8,8 @@ const Modal = ({ title, setOpenModal, openModal, children }) => {
         left: 0,
         width: "100%",
         height: "100%",
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-        backdropFilter: "blur(4px)",
+        backgroundColor: "rgba(0, 0, 0, 0.495)",
+        backdropFilter: "blur(9px)",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -40,7 +22,7 @@ const Modal = ({ title, setOpenModal, openModal, children }) => {
       <div
         style={{
           position: "relative",
-          backgroundColor: "#fff",
+          backgroundColor: "transparent",
           padding: "20px",
           borderRadius: "8px",
           boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
@@ -50,7 +32,7 @@ const Modal = ({ title, setOpenModal, openModal, children }) => {
           textAlign: "center",
         }}
       >
-        <h2>{title}</h2>
+        <h2 style={{ color: "#ffffff" }}>{title}</h2>
 
         <div style={{ textAlign: "left" }}>{children}</div>
       </div>

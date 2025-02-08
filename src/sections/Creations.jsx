@@ -1,5 +1,5 @@
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import image from "../../public/assets/projectImgs/image6.JPG";
+import image from "/assets/projectImgs/image9.JPG";
 import { Link } from "react-router-dom";
 const Creations = () => {
   return (
@@ -7,7 +7,9 @@ const Creations = () => {
       <div className="relative-creation">
         <div className="creation-layout">
           <div className="creation-main-area_img">
-            <img src={image} alt="" />
+            <div className="img">
+              <img src={image} alt="" />
+            </div>
             <div className="creation-main-area_caption">
               <p>Interior Design Residential</p>
               <span>Khobar - 2024</span>
@@ -30,20 +32,21 @@ const Creations = () => {
                   </p>
                 </div>
               </Link>
-              <Link to="/videos?playlistId=PLeEExte-NV5l8Eunk7QNlZtP3GTnqNuE7">
+
+              <Link to="/videos?playlistId=PLeEExte-NV5l792UiD24XLgan-mra2r3D">
                 <div className="creation-side_btns">
                   <p>
-                    Interior Projects{" "}
+                    Architecture Projects
                     <span>
                       <FaArrowUpRightFromSquare fill="#ffffff" size={13} />
                     </span>
                   </p>
                 </div>
               </Link>
-              <Link to="/videos?playlistId=PLeEExte-NV5l792UiD24XLgan-mra2r3D">
+              <Link to="/videos?playlistId=PLeEExte-NV5l8Eunk7QNlZtP3GTnqNuE7">
                 <div className="creation-side_btns">
                   <p>
-                    Architecture Projects
+                    Interior Projects{" "}
                     <span>
                       <FaArrowUpRightFromSquare fill="#ffffff" size={13} />
                     </span>
