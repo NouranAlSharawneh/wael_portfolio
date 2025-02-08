@@ -62,30 +62,28 @@ const Hero = () => {
 
   return (
     <section ref={heroSectionRef} className="hero-section">
-      <div className="relative-hero">
-        <div className="content">
-          <h1 ref={titleRef}>
-            Port<span>folio </span>
-          </h1>
-          <div className="img">
-            <video
-              src={heroVideo}
-              autoPlay
-              ref={videoRef}
-              type="video/mp4"
-              muted
-              loop
-              playsInline
-            />
-            <div className="hero-text">
-              <p>
-                Wael Al-Sharawneh -{year}
-                <span>
-                  This website showcases some of my work, all work is created
-                  exclusively by me.
-                </span>
-              </p>
-            </div>
+      <div className="content">
+        <h1 ref={titleRef}>
+          Port<span>folio </span>
+        </h1>
+        <div className="img">
+          <video
+            src={heroVideo}
+            autoPlay
+            ref={videoRef}
+            type="video/mp4"
+            muted
+            loop
+            playsInline
+          />
+          <div className="hero-text">
+            <p>
+              Wael Al-Sharawneh -{year}
+              <span>
+                This website showcases some of my work, all work is created
+                exclusively by me.
+              </span>
+            </p>
           </div>
         </div>
       </div>

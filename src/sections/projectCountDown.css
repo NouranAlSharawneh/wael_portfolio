@@ -73,6 +73,10 @@
 }
 
 @media screen and (max-width: 50em) {
+  .countdown-section {
+    min-height: 120dvh;
+  }
+
   .countdown-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
@@ -98,6 +102,10 @@
     width: 100%;
     gap: 0.5rem;
     flex-direction: row;
+  }
+
+  .countdown-type .elment h4 {
+    font-size: 0.8rem;
   }
 
   .countdown-image img {

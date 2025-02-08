@@ -10,7 +10,6 @@
 }
 
 .wrapper h4 {
-  padding-left: 1rem;
   color: var(--concrete-white);
   font-size: 3rem;
   margin-bottom: -2rem;
@@ -20,22 +19,8 @@
   display: grid;
   row-gap: 3rem;
   column-gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
-
-/* For desktop screens (3 columns) */
-/* @media (min-width: 1024px) {
-  .video-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-} */
-
-/* Optional: Tablet screens (2 columns) */
-/* @media (min-width: 768px) and (max-width: 1023px) {
-  .video-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
 
 .video-item {
   position: relative;
@@ -97,7 +82,7 @@
 }
 
 .tabs {
-  padding: 3rem 1rem;
+  padding: 3rem 0rem;
   display: flex;
   gap: 1rem;
   /* justify-content: space-between; */
@@ -112,4 +97,31 @@
   color: var(--bunker-blue);
   border: none;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 50em) {
+  .container {
+    padding: 0 3rem 3rem 3rem;
+    overflow: hidden;
+  }
+
+  .wrapper h4 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .tabs {
+    padding: 3rem 0rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .tabs button {
+    padding: 1rem 0;
+  }
+
+  .video-item {
+    position: relative;
+    padding-bottom: 70%;
+  }
 }
