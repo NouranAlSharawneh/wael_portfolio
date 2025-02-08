@@ -1,3 +1,6 @@
+import { BsLinkedin, BsWhatsapp } from "react-icons/bs";
+import { MdMarkEmailRead } from "react-icons/md";
+
 const Footer = () => {
   return (
     <section className="footer-section">
@@ -6,24 +9,24 @@ const Footer = () => {
           <div className="footer-desc">
             <ul>
               <li onClick={() => window.open("https://wa.me/+966530544029")}>
-                WhatsApp
+                <BsWhatsapp size={22} />
               </li>
 
               <li
                 onClick={() =>
                   window.open(
-                    "https://sa.linkedin.com/in/wael-sharawna-b57589ab"
+                    "https://www.linkedin.com/in/wael-alsharawneh-834b06203"
                   )
                 }
               >
-                Linkedin
+                <BsLinkedin size={22} />
               </li>
               <li
                 onClick={() =>
-                  window.open("mailto:waelsharawna2002@hotmail.com")
+                  window.open("mailto:waelsharawna2010@hotmail.com")
                 }
               >
-                Email
+                <MdMarkEmailRead size={22} />
               </li>
             </ul>
             <h3>Wael&apos;s Portfolio</h3>

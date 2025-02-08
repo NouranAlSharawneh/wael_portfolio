@@ -55,6 +55,11 @@
     height: 300px;
   }
 
+  .footer-desc {
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+
   .footer-desc h3 {
     font-size: 3rem;
   }
