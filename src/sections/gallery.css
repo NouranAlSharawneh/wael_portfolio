@@ -35,6 +35,10 @@
   height: 100%;
 }
 
+.gallery_element:nth-of-type(1) .gallery_imgContainer img {
+  object-position: top;
+}
+
 .gallery_element:nth-of-type(2) .gallery_imgContainer {
   top: -30vh;
   left: 5vw;

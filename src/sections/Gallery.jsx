@@ -12,6 +12,7 @@ import Image11 from "/assets/projectImgs/image11.JPG";
 import Image12 from "/assets/projectImgs/image12.JPG";
 import Image13 from "/assets/projectImgs/image13.JPG";
 import Image14 from "/assets/projectImgs/image14.JPG";
+import Image15 from "/assets/projectImgs/image15.png";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
@@ -42,7 +43,7 @@ const Gallery = () => {
       scale: scale6,
     },
     {
-      src: Image11,
+      src: Image15,
       scale: scale5,
     },
     {
