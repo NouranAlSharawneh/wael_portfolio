@@ -17,7 +17,7 @@
 
 .relative-message {
   position: sticky;
-  top: 0;
+  top: 20vh;
 }
 
 .relative-message h4 {
