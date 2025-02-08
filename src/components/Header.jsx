@@ -31,9 +31,7 @@ const Header = () => {
             <ul>
               <li onClick={() => scrollToSection("about")}>About</li>
               <li onClick={() => scrollToSection("projects")}>Projects</li>
-              <li onClick={() => scrollToSection("countdown-section")}>
-                Experience
-              </li>
+              <li onClick={() => scrollToSection("contact")}>Contact</li>
             </ul>
           </nav>
         </div>
@@ -46,10 +44,12 @@ const Header = () => {
           >
             Resume
           </a>
-          <a onClick={() => scrollToSection("contact")}>Contact</a>
         </div>
-        <button onClick={handleMenu} style={{ height: "2rem", width: "2rem" }}>
-          {menu ? <IoCloseSharp size={16} /> : <RiMenu3Fill size={16} />}
+        <button
+          onClick={handleMenu}
+          style={{ height: "2rem", width: "2rem", display: "inline-block" }}
+        >
+          {menu ? <IoCloseSharp size={30} /> : <RiMenu3Fill size={30} />}
         </button>
       </div>
       {menu && (
@@ -58,10 +58,17 @@ const Header = () => {
             <ul>
               <li onClick={() => scrollToSection("about")}>About</li>
               <li onClick={() => scrollToSection("projects")}>Projects</li>
-              <li onClick={() => scrollToSection("countdown-section")}>
-                Experience
-              </li>
               <li onClick={() => scrollToSection("contact")}>Contact</li>
+              <li>
+                <a
+                  href="../../public/assets/pdf/Wael_Al-sharawneh_CV_Architect.pdf"
+                  download="Wael_Al-sharawneh_CV_Architect.pdf"
+                  target="_blank"
+                  title="download resume"
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
