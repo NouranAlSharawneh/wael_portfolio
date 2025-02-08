@@ -3,7 +3,7 @@ import image from "../../public/assets/projectImgs/image6.JPG";
 import { Link } from "react-router-dom";
 const Creations = () => {
   return (
-    <section className="creations-section">
+    <section className="creations-section" id="projects">
       <div className="relative-creation">
         <div className="creation-layout">
           <div className="creation-main-area_img">

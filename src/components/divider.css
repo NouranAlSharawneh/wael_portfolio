@@ -6,7 +6,7 @@
 
 .divider {
   background-color: var(--mist-grey);
-  height: 0.05rem;
+  height: 0.09rem;
   width: 0; /* Start with zero width */
   transition: width 0.8s ease-in-out; /* Smooth transition */
 }

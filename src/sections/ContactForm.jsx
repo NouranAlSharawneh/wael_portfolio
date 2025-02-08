@@ -45,7 +45,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-form-container">
+    <div className="contact-form-container" id="contact">
       <h2>Contact Me</h2>
       {success && <p className="success-message">Message sent successfully!</p>}
       {error && <p className="error-message">Oops! Something went wrong.</p>}

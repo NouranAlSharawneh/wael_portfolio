@@ -61,7 +61,7 @@ const Hero = () => {
   const year = new Date().getFullYear();
 
   return (
-    <section ref={heroSectionRef} className="hero-section">
+    <section ref={heroSectionRef} className="hero-section" id="hero">
       <div className="content">
         <h1 ref={titleRef}>
           Port<span>folio </span>

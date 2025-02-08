@@ -1,7 +1,7 @@
 // import AvatarImage from "../../public/assets/avatarDark.JPG";
 const About = () => {
   return (
-    <section className="about-section">
+    <section className="about-section" id="about">
       <div className="about_wrapper">
         <div className="about_mainLayout">
           <div className="about_title">

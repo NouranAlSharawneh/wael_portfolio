@@ -9,6 +9,10 @@
   padding: 1.5rem 3rem 2rem 3rem;
 }
 
+.navItem {
+  width: 16rem;
+}
+
 .nav_logo p {
   font-size: 1.8rem;
   font-weight: 500;
@@ -28,10 +32,11 @@
   gap: 1rem;
   font-weight: 100;
   font-size: 0.9rem;
+  justify-content: center;
 }
 
 .nav_items nav ul li {
-  color: var(--mist-grey);
+  color: var(--concrete-white);
   cursor: pointer;
   transition: text-decoration 0.9s cubic-bezier(0.42, 0, 0.58, 1) left;
 }
@@ -43,10 +48,15 @@
   text-decoration-thickness: 0.1rem;
 }
 
+.nav_links {
+  text-align: right;
+}
+
 .nav_links a {
+  cursor: pointer;
   font-weight: 100;
   font-size: 0.9rem;
-  color: var(--mist-grey);
+  color: var(--concrete-white);
   transition: text-decoration 0.9s ease-in-out;
 }
 
