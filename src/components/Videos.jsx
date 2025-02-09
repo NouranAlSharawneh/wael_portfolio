@@ -6,7 +6,8 @@ const Videos = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedPlaylist, setSelectedPlaylist] = useState("playlist1"); // Track selected playlist
+  const [selectedPlaylist, setSelectedPlaylist] = useState(null); // Initialize to null
+  // const [selectedPlaylist, setSelectedPlaylist] = useState("playlist1"); // Track selected playlist
   const VIDEOS_PER_PAGE = 6;
   const [searchParams] = useSearchParams();
   const playlistIdFromURL = searchParams.get("playlistId");
@@ -32,21 +33,25 @@ const Videos = () => {
     },
   };
 
-  // Set the default selected playlist based on the URL
   useEffect(() => {
     if (playlistIdFromURL) {
-      // Find the playlist key that matches the `playlistId` from the URL
       const playlistKey = Object.keys(playlists).find(
         (key) => playlists[key].id === playlistIdFromURL
       );
-      if (playlistKey) {
-        setSelectedPlaylist(playlistKey);
-      }
+      setSelectedPlaylist(playlistKey || null);
+    } else {
+      setSelectedPlaylist(null); // Set to null when no playlistId
     }
   }, [playlistIdFromURL, playlists]);
 
   useEffect(() => {
     const fetchPlaylistVideos = async () => {
+      if (!selectedPlaylist) {
+        // Handle "All Projects" case (show all videos or handle differently)
+        // setVideos([]);
+        setLoading(false);
+        return;
+      }
       try {
         const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
         const playlistId = playlists[selectedPlaylist]?.id; // Get playlist ID based on selection
@@ -95,22 +100,28 @@ const Videos = () => {
   if (loading) return <div className="loading">Loading...</div>;
 
   // Get the title of the currently selected playlist
-  const selectedPlaylistTitle = playlists[selectedPlaylist]?.title;
+  // const selectedPlaylistTitle = playlists[selectedPlaylist]?.title;
 
   return (
     <div className="container">
       <div className="wrapper">
         {/* Dynamically display the selected playlist title */}
-        <h4>{selectedPlaylistTitle}</h4>
+        <h4>
+          {selectedPlaylist
+            ? playlists[selectedPlaylist].title
+            : "All Projects"}
+        </h4>
         <div className="video-container">
           {/* Tabs for switching playlists */}
           <div className="tabs">
             {Object.keys(playlists)
-              .filter(
-                (key) =>
-                  playlists[key].title.split(" ")[0] ===
-                  playlists[selectedPlaylist].title.split(" ")[0]
-              )
+              .filter((key) => {
+                if (!selectedPlaylist) return true; // Show all tabs when no playlist selected
+                const selectedCategory =
+                  playlists[selectedPlaylist].title.split(" ")[0];
+                const currentCategory = playlists[key].title.split(" ")[0];
+                return selectedCategory === currentCategory;
+              })
               .map((key) => (
                 <button
                   key={key}
@@ -175,3 +186,5 @@ const Videos = () => {
 };
 
 export default Videos;
+
+// trying to implement the all projects

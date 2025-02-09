@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -24,10 +25,9 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Replace these with your EmailJS credentials
-    const serviceID = "YOUR_SERVICE_ID"; // From EmailJS dashboard
-    const templateID = "YOUR_TEMPLATE_ID"; // From EmailJS dashboard
-    const userID = "YOUR_USER_ID"; // From EmailJS dashboard
+    const serviceID = "service_0taigjq"; // From EmailJS dashboard
+    const templateID = "template_3e5aw0n "; // From EmailJS dashboard
+    const userID = "ocU5N8Ol3DBu6hUuZ"; // From EmailJS dashboard
 
     emailjs
       .send(serviceID, templateID, formData, userID)
@@ -48,10 +48,14 @@ const ContactForm = () => {
     <section className="contact-section" id="contact">
       <div className="contact-form-container">
         <h2>Contact Me</h2>
-        {success && (
-          <p className="success-message">Message sent successfully!</p>
-        )}
-        {error && <p className="error-message">Oops! Something went wrong.</p>}
+        {success &&
+          toast("email got sent successfully!", {
+            type: "success",
+          })}
+        {error &&
+          toast("ops! something went wrong", {
+            type: "error",
+          })}
         <form onSubmit={handleSubmit} className="contact-form">
           <label htmlFor="name">Name</label>
           <input

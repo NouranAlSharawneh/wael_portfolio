@@ -18,6 +18,7 @@ import Lenis from "lenis";
 import ContactForm from "./sections/ContactForm";
 import Footer from "./sections/Footer";
 import AnimationRevealLoader from "./components/AnimationRevealLoader";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   useEffect(() => {
@@ -39,6 +40,18 @@ const App = () => {
             path="/"
             element={
               <main>
+                <ToastContainer
+                  position="top-center"
+                  autoClose={3000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick={false}
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                  theme="light"
+                />
                 <Hero />
                 <Divider />
                 <About />
