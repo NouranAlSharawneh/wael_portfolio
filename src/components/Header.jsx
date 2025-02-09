@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import { RiMenu3Fill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+
+  const location = useLocation();
+  const isVideosPage = location.pathname.includes("/videos");
 
   const handleMenu = () => {
     setMenu(!menu);
@@ -27,13 +30,15 @@ const Header = () => {
           </div>
         </Link>
         <div className="nav_items navItem">
-          <nav>
-            <ul>
-              <li onClick={() => scrollToSection("about")}>About</li>
-              <li onClick={() => scrollToSection("projects")}>Projects</li>
-              <li onClick={() => scrollToSection("contact")}>Contact</li>
-            </ul>
-          </nav>
+          {!isVideosPage && (
+            <nav>
+              <ul>
+                <li onClick={() => scrollToSection("about")}>About</li>
+                <li onClick={() => scrollToSection("projects")}>Projects</li>
+                <li onClick={() => scrollToSection("contact")}>Contact</li>
+              </ul>
+            </nav>
+          )}
         </div>
         <div className="nav_links navItem">
           <a
@@ -45,13 +50,16 @@ const Header = () => {
             Resume
           </a>
         </div>
-        <div
-          className="menu btn"
-          onClick={handleMenu}
-          style={{ width: "3.5rem" }}
-        >
-          {menu ? <IoCloseSharp size={30} /> : <RiMenu3Fill size={30} />}
-        </div>
+
+        {!isVideosPage && (
+          <div
+            className="menu btn"
+            onClick={handleMenu}
+            style={{ width: "3.5rem" }}
+          >
+            {menu ? <IoCloseSharp size={30} /> : <RiMenu3Fill size={30} />}
+          </div>
+        )}
       </div>
       {menu && (
         <div className="mobile_menu">
