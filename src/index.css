@@ -11,6 +11,7 @@
 @import "./sections/gallery.css";
 @import "./sections/contactForm.css";
 @import "./sections/footer.css";
+@import "./components/animationRevealLoader.css";
 
 :root {
   font-feature-settings: "ss02", "ss08";

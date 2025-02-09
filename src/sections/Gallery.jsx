@@ -1,17 +1,9 @@
 import Image1 from "/assets/projectImgs/image1.JPG";
-// import Image2 from "/assets/projectImgs/image2.png";
 import Image3 from "/assets/projectImgs/image3.JPG";
-// import Image4 from "/assets/projectImgs/image4.png";
 import Image5 from "/assets/projectImgs/image5.JPG";
 import Image6 from "/assets/projectImgs/image6.JPG";
 import Image7 from "/assets/projectImgs/image7.JPG";
-import Image8 from "/assets/projectImgs/image8.JPG";
-import Image9 from "/assets/projectImgs/image9.JPG";
-import Image10 from "/assets/projectImgs/image10.JPG";
 import Image11 from "/assets/projectImgs/image11.JPG";
-import Image12 from "/assets/projectImgs/image12.JPG";
-import Image13 from "/assets/projectImgs/image13.JPG";
-import Image14 from "/assets/projectImgs/image14.JPG";
 import Image15 from "/assets/projectImgs/image15.png";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
@@ -31,7 +23,7 @@ const Gallery = () => {
 
   const images = [
     {
-      src: Image1,
+      src: Image15,
       scale: scale4,
     },
     {

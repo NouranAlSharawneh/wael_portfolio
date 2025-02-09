@@ -45,12 +45,13 @@ const Header = () => {
             Resume
           </a>
         </div>
-        <button
+        <div
+          className="menu btn"
           onClick={handleMenu}
-          style={{ height: "2rem", width: "2rem", display: "inline-block" }}
+          style={{ width: "3.5rem" }}
         >
           {menu ? <IoCloseSharp size={30} /> : <RiMenu3Fill size={30} />}
-        </button>
+        </div>
       </div>
       {menu && (
         <div className="mobile_menu">

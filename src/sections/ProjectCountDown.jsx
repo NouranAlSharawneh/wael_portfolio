@@ -65,9 +65,11 @@ const ProjectCountDown = () => {
           <div className="countdown-grid">
             <div className="countdown-content">
               <h3>Projects +{projectNum}</h3>
-              <p style={{ padding: "1rem 0" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                qui cupiditate animi voluptatibus illo corporis? !
+              <p style={{ padding: "1rem 0", width: "100%", flex: "1" }}>
+                These projects were entirely completed by me, either as an
+                architect, an interior designer, or both in some cases.
+                Additionally, I have contributed to and participated in many
+                other projects.
               </p>
               <div className="countdown-type">
                 <div
@@ -104,7 +106,7 @@ const ProjectCountDown = () => {
 
       {openModal && modalType === "architecture" && (
         <Modal
-          title="Architecture"
+          title="Architecture Projects"
           setOpenModal={setOpenModal}
           openModal={openModal}
         >
@@ -172,7 +174,7 @@ const ProjectCountDown = () => {
 
       {openModal && modalType === "interior" && (
         <Modal
-          title="Interior"
+          title="Interior Projects"
           setOpenModal={setOpenModal}
           openModal={openModal}
         >

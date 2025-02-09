@@ -26,10 +26,6 @@
   font-size: 6rem;
 }
 
-.countdown-content p {
-  /* margin-top: 3rem; */
-  text-wrap: balance;
-}
 .countdown-image {
   justify-self: right;
   width: 100%;
@@ -134,7 +130,7 @@
   }
 
   .countdown-type .elment h4 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .countdown-image img {

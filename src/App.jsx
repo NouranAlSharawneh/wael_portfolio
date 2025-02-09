@@ -17,6 +17,7 @@ import Gallery from "./sections/Gallery";
 import Lenis from "lenis";
 import ContactForm from "./sections/ContactForm";
 import Footer from "./sections/Footer";
+import AnimationRevealLoader from "./components/AnimationRevealLoader";
 
 const App = () => {
   useEffect(() => {
@@ -30,30 +31,31 @@ const App = () => {
 
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <main>
-              <Hero />
-              <Divider />
-              <About />
-              <Message />
-              <Divider />
-              <Creations />
-              <ProjectCountDown />
-              <Gallery />
-              <ContactForm />
-              <Footer />
-            </main>
-          }
-        />
-
-        <Route path="/videos" element={<Videos />} />
-
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+      <>
+        <AnimationRevealLoader />
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <main>
+                <Hero />
+                <Divider />
+                <About />
+                <Message />
+                <Divider />
+                <Creations />
+                <ProjectCountDown />
+                <Gallery />
+                <ContactForm />
+                <Footer />
+              </main>
+            }
+          />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </>
     </Router>
   );
 };

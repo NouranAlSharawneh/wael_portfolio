@@ -71,7 +71,7 @@
   padding-right: 1rem;
 }
 
-button {
+.btn {
   display: none;
 }
 
@@ -95,8 +95,8 @@ button {
     display: none;
   }
 
-  button {
-    display: inline;
+  .btn {
+    display: inline-block;
     background: var(--bunker-blue);
     border: 0;
     cursor: pointer;
