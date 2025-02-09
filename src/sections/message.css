@@ -3,9 +3,9 @@
   background-color: var(--bunker-blue);
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.9)
+      rgba(255, 255, 255, 0.8)
     ),
-    url("./assets/background.jpg");
+    url("/assets/background.jpg");
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -14,7 +14,6 @@
   display: flex;
   align-items: start;
   justify-content: start;
-  background-blend-mode: hard-light;
 }
 
 .relative-message {
@@ -47,9 +46,7 @@
 
 @media screen and (max-width: 50em) {
   .message-section {
-    background-position: center left;
-    height: 110dvh;
-    top: -10rem;
+    background-position: center right;
   }
   .relative-message h4 {
     width: 100%;

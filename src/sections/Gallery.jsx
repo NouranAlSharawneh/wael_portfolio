@@ -23,11 +23,11 @@ const Gallery = () => {
 
   const images = [
     {
-      src: Image15,
+      src: Image7,
       scale: scale4,
     },
     {
-      src: Image7,
+      src: Image15,
       scale: scale5,
     },
     {
@@ -35,7 +35,7 @@ const Gallery = () => {
       scale: scale6,
     },
     {
-      src: Image15,
+      src: Image1,
       scale: scale5,
     },
     {

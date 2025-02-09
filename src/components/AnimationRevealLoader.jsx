@@ -10,14 +10,14 @@ const AnimationRevealLoader = () => {
     tl.to([".top-panel", ".bottom-panel"], {
       height: "50%",
       ease: "power3.inOut",
-      duration: 2,
+      duration: 1.5,
     });
 
     tl.to(
       ".loader_text",
       {
         opacity: 1,
-        duration: 3,
+        duration: 2,
         ease: "power3.inOut",
       },
       "-=0.5"
@@ -26,7 +26,7 @@ const AnimationRevealLoader = () => {
       ".loader_text",
       {
         opacity: 0,
-        duration: 2,
+        duration: 1,
         scale: 1.5,
         ease: "power3.inOut",
       },
@@ -46,7 +46,7 @@ const AnimationRevealLoader = () => {
       [".loader", ".loader_container"],
       {
         stagger: 0.4,
-        duration: 4,
+        duration: 2,
         clipPath: "polygon(0 0, 100% 0, 100% 0%, 0% 0%)",
         ease: "power3.inOut",
       },

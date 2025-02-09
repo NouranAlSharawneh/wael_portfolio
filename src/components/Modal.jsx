@@ -10,6 +10,7 @@ const Modal = ({ title, setOpenModal, openModal, children }) => {
         height: "100%",
         backgroundColor: "rgba(0, 0, 0, 0.495)",
         backdropFilter: "blur(9px)",
+        WebkitBackdropFilter: "blur(9px)",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

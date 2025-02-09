@@ -36,7 +36,7 @@
 }
 
 .gallery_element:nth-of-type(1) .gallery_imgContainer img {
-  object-position: top;
+  object-position: center;
 }
 
 .gallery_element:nth-of-type(2) .gallery_imgContainer {
@@ -57,6 +57,11 @@
   left: 27.5vw;
   width: 25vw;
   height: 25vh;
+}
+
+.gallery_element:nth-of-type(2) .gallery_imgContainer img,
+.gallery_element:nth-of-type(4) .gallery_imgContainer img {
+  object-position: top;
 }
 
 .gallery_element:nth-of-type(5) .gallery_imgContainer {

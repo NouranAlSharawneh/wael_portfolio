@@ -4,11 +4,12 @@
   z-index: 28;
   position: relative;
   padding: 0 3rem 3rem 3rem;
-  background-image: url("./assets/darkBackground.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/darkBackground.jpg");
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
-  background-blend-mode: hard-light;
+  /* background-blend-mode: hard-light; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,8 +20,7 @@
   padding: 2rem;
   z-index: 28;
   position: sticky;
-  background: transparent;
-  backdrop-filter: blur(8px);
+
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
@@ -51,8 +51,7 @@
   border-bottom: 5px solid #ccc;
   border-radius: 0.5rem;
   font-size: 1rem;
-  backdrop-filter: blur(15px);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.01);
   transition: border-color 3s ease;
 }
 
