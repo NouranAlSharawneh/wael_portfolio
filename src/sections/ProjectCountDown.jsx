@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import projectImage from "/assets/projectImgs/image13.JPG";
-import { BsArrowDown, BsHousesFill } from "react-icons/bs";
+import { BsHousesFill } from "react-icons/bs";
 import { GiSofa } from "react-icons/gi";
 import Modal from "../components/Modal";
 import { IoIosArrowDown } from "react-icons/io";

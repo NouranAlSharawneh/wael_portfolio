@@ -46,6 +46,10 @@
   height: 30vh;
 }
 
+.gallery_element:nth-of-type(2) .gallery_imgContainer img {
+  object-position: 85% 15%;
+}
+
 .gallery_element:nth-of-type(3) .gallery_imgContainer {
   top: -10vh;
   left: -25vw;
@@ -59,7 +63,6 @@
   height: 25vh;
 }
 
-.gallery_element:nth-of-type(2) .gallery_imgContainer img,
 .gallery_element:nth-of-type(4) .gallery_imgContainer img {
   object-position: top;
 }
