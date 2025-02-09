@@ -93,3 +93,18 @@ a {
 li {
   list-style-type: none;
 }
+
+/* Bounce animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust the bounce height here */
+  }
+}
+
+.bounce {
+  animation: bounce 1.5s infinite; /* Repeat the animation indefinitely */
+}

@@ -19,6 +19,7 @@ import ContactForm from "./sections/ContactForm";
 import Footer from "./sections/Footer";
 import AnimationRevealLoader from "./components/AnimationRevealLoader";
 import { ToastContainer } from "react-toastify";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   useEffect(() => {
@@ -52,6 +53,7 @@ const App = () => {
                   pauseOnHover
                   theme="light"
                 />
+                <ScrollToTop />
                 <Hero />
                 <Divider />
                 <About />
