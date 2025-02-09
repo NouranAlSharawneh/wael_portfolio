@@ -26,9 +26,10 @@
 
 .about_textArea p {
   color: var(--concrete-white);
-  text-align: balance;
-  font-size: 1.15rem;
+  /* text-align: justify; */
   line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 100;
 }
 
 .about_title {
@@ -39,6 +40,7 @@
 .about_title h4 {
   color: var(--concrete-white);
   font-size: 5rem;
+  /* text-align: center; */
   line-height: 0.8;
 }
 
