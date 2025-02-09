@@ -74,10 +74,13 @@ const ProjectCountDown = () => {
                   fontSize: "1rem",
                 }}
               >
-                These projects were entirely completed by me, either as an
-                architect, an interior designer, or both in some cases.
+                I independently completed these projects, serving as an
+                architect, an interior designer, or both in some cases. My work
+                included design development, material selection, and overseeing
+                execution to ensure both aesthetics and functionality.
                 Additionally, I have contributed to and participated in many
-                other projects.
+                other projects, offering design insights and support throughout
+                various stages of development.
               </p>
               <div className="countdown-type">
                 <div
