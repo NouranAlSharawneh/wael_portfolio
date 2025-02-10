@@ -55,7 +55,7 @@ const Header = () => {
           <div
             className="menu btn"
             onClick={handleMenu}
-            style={{ width: "6rem" }}
+            style={{ width: "8rem" }}
           >
             {menu ? <IoCloseSharp size={50} /> : <RiMenu3Fill size={50} />}
           </div>
