@@ -70,10 +70,11 @@ const Header = () => {
               <li onClick={() => scrollToSection("contact")}>Contact</li>
               <li>
                 <a
-                  href="../../public/assets/pdf/Wael_Al-sharawneh_CV_Architect.pdf"
-                  download="Wael_Al-sharawneh_CV_Architect.pdf"
+                  href="/assets/pdf/Wael_Al-sharawneh_CV_Architect.pdf"
+                  download
                   target="_blank"
-                  title="download resume"
+                  rel="noopener noreferrer"
+                  title="Download Resume"
                 >
                   Resume
                 </a>
