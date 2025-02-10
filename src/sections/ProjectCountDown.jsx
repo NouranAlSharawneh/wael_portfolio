@@ -71,7 +71,6 @@ const ProjectCountDown = () => {
                   width: "100%",
                   flex: "1",
                   fontWeight: "100",
-                  fontSize: "1rem",
                 }}
               >
                 I independently completed these projects, serving as an

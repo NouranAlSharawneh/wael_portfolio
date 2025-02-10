@@ -76,6 +76,10 @@
   color: var(--bunker-blue);
 }
 
+.countdown-content p {
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 50em) {
   .countdown-section {
     min-height: 120dvh;
@@ -89,6 +93,11 @@
 
   .countdown-content h3 {
     font-size: 2.5rem;
+  }
+
+  .countdown-content p {
+    font-size: 0.8rem;
+    line-height: 1.5;
   }
 
   .countdown-type {
