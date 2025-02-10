@@ -30,18 +30,7 @@
 }
 
 .relative-message h4 .word {
-  display: inline-block; /* Ensures each word animates independently */
-}
-
-.relative-message .message-img {
-  line-height: 0;
   display: inline-block;
-  background: url("../../public/assets/image.webp") no-repeat center center;
-  background-size: contain;
-  clip-path: polygon(80% 0, 100% 50%, 100% 100%, 0 100%, 0 0);
-  border-radius: 1rem;
-  width: 180px;
-  height: 100px;
 }
 
 @media screen and (max-width: 50em) {
