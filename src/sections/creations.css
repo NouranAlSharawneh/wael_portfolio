@@ -146,7 +146,7 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 69em) {
+@media screen and (max-width: 88em) {
   .creations-section {
     padding: 0 2rem;
     top: 6vh;
