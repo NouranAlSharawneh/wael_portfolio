@@ -79,7 +79,7 @@
   display: none;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 60em) {
   .nav_logo p {
     font-size: 1.2rem;
   }

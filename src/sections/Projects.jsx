@@ -1,29 +1,29 @@
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import image from "/assets/projectImgs/image9.JPG";
 import { Link } from "react-router-dom";
-const Creations = () => {
+const Projects = () => {
   return (
-    <section className="creations-section" id="projects">
-      <div className="relative-creation">
-        <div className="creation-layout">
-          <div className="creation-main-area_img">
+    <section className="projects-section" id="projects">
+      <div className="relative-project">
+        <div className="project-layout">
+          <div className="project-main-area_img">
             <div className="img">
               <img src={image} alt="" />
             </div>
-            <div className="creation-main-area_caption">
+            <div className="project-main-area_caption">
               <p>Interior Design Residential</p>
               <span>Khobar - 2024</span>
             </div>
             <hr />
           </div>
-          <div className="creation-side-area_title">
+          <div className="project-side-area_title">
             <h5>Projects</h5>
           </div>
-          <div className="creation-side-area">
+          <div className="project-side-area">
             <span>&#x2197;</span>
-            <div className="creation-side-area_buttons">
+            <div className="project-side-area_buttons">
               <Link to="/videos">
-                <div className="creation-side_btns">
+                <div className="project-side_btns">
                   <p>
                     All Projects
                     <span>
@@ -34,7 +34,7 @@ const Creations = () => {
               </Link>
 
               <Link to="/videos?playlistId=PLeEExte-NV5l792UiD24XLgan-mra2r3D">
-                <div className="creation-side_btns">
+                <div className="project-side_btns">
                   <p>
                     Architecture Projects
                     <span>
@@ -44,7 +44,7 @@ const Creations = () => {
                 </div>
               </Link>
               <Link to="/videos?playlistId=PLeEExte-NV5kxOK2YHMrgkIJ6_L2Zw5Mc">
-                <div className="creation-side_btns">
+                <div className="project-side_btns">
                   <p>
                     Interior Projects{" "}
                     <span>
@@ -67,4 +67,4 @@ const Creations = () => {
   );
 };
 
-export default Creations;
+export default Projects;

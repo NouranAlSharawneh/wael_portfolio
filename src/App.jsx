@@ -9,7 +9,7 @@ import Divider from "./components/Divider";
 import Header from "./components/Header";
 import Videos from "./components/Videos";
 import About from "./sections/About";
-import Creations from "./sections/Creations";
+import Projects from "./sections/Projects";
 import Hero from "./sections/Hero";
 import Message from "./sections/Message";
 import ProjectCountDown from "./sections/ProjectCountDown";
@@ -59,7 +59,7 @@ const App = () => {
                 <About />
                 <Message />
                 <Divider />
-                <Creations />
+                <Projects />
                 <ProjectCountDown />
                 <Gallery />
                 <ContactForm />

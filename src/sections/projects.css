@@ -1,4 +1,4 @@
-.creations-section {
+.projects-section {
   position: relative;
 
   z-index: 13;
@@ -7,36 +7,37 @@
   padding: 0 3rem 3rem 3rem;
 }
 
-.relative-creation {
+.relative-project {
   position: sticky;
   top: 10vh;
 }
 
-.creation-layout {
+.project-layout {
   padding: 3rem 0;
   position: relative;
   display: grid;
   width: 100%;
   grid-template-columns: 2fr 0.5fr 0.5fr;
   grid-template-rows: 0.1fr 1fr;
+  column-gap: 2rem;
 }
 
-.creation-main-area_img {
+.project-main-area_img {
   grid-row: 1 / span 2;
   grid-column: 1 / span 2;
 }
 
-.creation-main-area_caption {
+.project-main-area_caption {
   padding-right: 2.5rem;
 }
 
-.creation-main-area_img .img {
-  width: 1150px;
+.project-main-area_img .img {
+  width: 100%;
   height: 450px;
   overflow: hidden;
 }
 
-.creation-main-area_img .img img {
+.project-main-area_img .img img {
   width: 100%;
   height: 100%;
   object-position: 35% 65%;
@@ -45,28 +46,28 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.creation-main-area_img .img:hover img {
+.project-main-area_img .img:hover img {
   cursor: pointer;
   transform: scale(1.01);
 }
 
-.creation-main-area_caption {
+.project-main-area_caption {
   padding-top: 1.5rem;
   display: flex;
   justify-content: space-between;
 }
 
-.creation-main-area_img hr {
+.project-main-area_img hr {
   background-color: var(--rock-blue);
   width: 96%;
   transition: width 0.5s ease-in-out;
 }
 
-.creation-main-area_img:hover hr {
+.project-main-area_img:hover hr {
   width: 0%;
 }
 
-.creation-side-area_title {
+.project-side-area_title {
   background-color: var(--bunker-blue);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
   grid-column: 2 / span 2;
@@ -74,13 +75,13 @@
   padding: 2rem 0 0 3rem;
 }
 
-.creation-side-area_title h5 {
+.project-side-area_title h5 {
   font-size: 5rem;
   right: 0%;
   padding-bottom: 3rem;
 }
 
-.creation-side-area {
+.project-side-area {
   padding-top: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -92,14 +93,10 @@
   z-index: 30;
 }
 
-.creation-side-area_buttons {
-  padding-right: 1rem;
-}
-
-.creation-side-area span {
+.project-side-area span {
   display: flex;
-  align-items: right;
   justify-content: end;
+  padding-right: 1rem;
   color: var(--rock-blue);
   font-size: 10rem;
   line-height: 0.5;
@@ -107,18 +104,18 @@
   transition: transform 0.7s ease;
 }
 
-.creation-side-area span:hover {
+.project-side-area span:hover {
   transform: rotate(5deg);
 }
 
-.creation-side-area p {
-  width: 90%;
+.project-side-area p {
+  width: 100%;
   font-size: 0.8rem;
   font-weight: 100;
   line-height: 1.5;
 }
 
-.creation-side_btns {
+.project-side_btns {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -127,7 +124,7 @@
   padding: 0.5rem 0;
 }
 
-.creation-side_btns p {
+.project-side_btns p {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,8 +134,8 @@
   background-color: var(--rock-blue);
 }
 
-.creation-side_btns p:hover,
-.creation-side_btns span:hover {
+.project-side_btns p:hover,
+.project-side_btns span:hover {
   color: var(--concrete-white);
   transition: transform 0.5s ease-in-out;
   transform: scale(1.1);
@@ -146,33 +143,33 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 88em) {
-  .creations-section {
+@media screen and (max-width: 60em) {
+  .projects-section {
     padding: 0 2rem;
     top: 6vh;
     height: 135dvh;
   }
 
-  .creation-layout {
+  .project-layout {
     grid-template-columns: 1fr;
     grid-template-rows: 0.1fr;
   }
 
-  .creation-main-area_img {
+  .project-main-area_img {
     grid-column: 2 / span 2;
     grid-row: 1;
   }
 
-  .creation-main-area_img .img {
+  .project-main-area_img .img {
     width: 100%;
     height: 300px;
   }
 
-  .creation-main-area_caption {
+  .project-main-area_caption {
     padding-right: 0.5rem;
   }
 
-  .creation-side-area_title {
+  .project-side-area_title {
     padding: 1rem 0;
     width: 90%;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -182,13 +179,13 @@
     left: 5%;
   }
 
-  .creation-side-area_title h5 {
+  .project-side-area_title h5 {
     padding: 0 2rem;
     font-size: 3.5rem;
     z-index: 25;
     text-align: center;
   }
-  .creation-side-area {
+  .project-side-area {
     padding-top: 1.2rem;
     display: flex;
     flex-direction: column;
@@ -200,15 +197,15 @@
     z-index: 30;
   }
 
-  .creation-side-area span {
+  .project-side-area span {
     display: none;
   }
 
-  .creation-side_btns span {
+  .project-side_btns span {
     display: block;
   }
 
-  .creation-side-area p {
+  .project-side-area p {
     width: 100%;
     font-size: 0.8rem;
     font-weight: 100;
@@ -216,7 +213,7 @@
     text-align: left;
   }
 
-  .creation-side_btns {
+  .project-side_btns {
     padding-bottom: 1rem;
   }
 }
