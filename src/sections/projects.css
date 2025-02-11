@@ -156,7 +156,7 @@
   }
 
   .project-main-area_img {
-    grid-column: 2 / span 2;
+    grid-column: 1 / span 3;
     grid-row: 1;
   }
 
@@ -195,6 +195,7 @@
     grid-area: 2/3;
     gap: 1rem;
     z-index: 30;
+    grid-column: 1 / span 3;
   }
 
   .project-side-area span {
