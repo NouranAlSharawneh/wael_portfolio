@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 
 const Videos = () => {
@@ -11,24 +11,27 @@ const Videos = () => {
   const playlistIdFromURL = searchParams.get("playlistId");
   const navigate = useNavigate();
 
-  const playlists = {
-    playlist1: {
-      id: "PLeEExte-NV5k1EGgG-ZF_BwVSaGzammoR",
-      title: "Architecture Commercial",
-    },
-    playlist2: {
-      id: "PLeEExte-NV5l792UiD24XLgan-mra2r3D",
-      title: "Architecture Residential",
-    },
-    playlist3: {
-      id: "PLeEExte-NV5kxOK2YHMrgkIJ6_L2Zw5Mc",
-      title: "Interior Design Residential",
-    },
-    playlist4: {
-      id: "PLeEExte-NV5l8Eunk7QNlZtP3GTnqNuE7",
-      title: "Interior Design Commercial",
-    },
-  };
+  const playlists = useMemo(
+    () => ({
+      playlist1: {
+        id: "PLeEExte-NV5k1EGgG-ZF_BwVSaGzammoR",
+        title: "Architecture Commercial",
+      },
+      playlist2: {
+        id: "PLeEExte-NV5l792UiD24XLgan-mra2r3D",
+        title: "Architecture Residential",
+      },
+      playlist3: {
+        id: "PLeEExte-NV5kxOK2YHMrgkIJ6_L2Zw5Mc",
+        title: "Interior Design Residential",
+      },
+      playlist4: {
+        id: "PLeEExte-NV5l8Eunk7QNlZtP3GTnqNuE7",
+        title: "Interior Design Commercial",
+      },
+    }),
+    []
+  );
 
   useEffect(() => {
     if (playlistIdFromURL) {

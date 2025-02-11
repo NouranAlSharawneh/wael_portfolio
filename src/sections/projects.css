@@ -177,6 +177,7 @@
     justify-content: center;
     align-items: center;
     left: 5%;
+    grid-column: 1 / span 3;
   }
 
   .project-side-area_title h5 {
