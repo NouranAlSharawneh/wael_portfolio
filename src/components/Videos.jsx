@@ -55,7 +55,6 @@ const Videos = () => {
         const response = await fetch(
           `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${playlistId}&key=${apiKey}`
         );
-
         if (!response.ok) {
           if (response.status === 400) {
             throw new Error(
@@ -74,7 +73,6 @@ const Videos = () => {
 
         const data = await response.json();
         if (data.error) throw new Error(data.error.message);
-
         setVideos(
           data.items.map((item) => ({
             id: item.snippet.resourceId.videoId,
